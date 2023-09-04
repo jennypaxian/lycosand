@@ -131,6 +131,9 @@ export const nodeinfo2 = async () => {
 				avatar: 40000000,
 				banner: 40000000,
 				general: 40000000,
+			},
+			suggestions: {
+				enabled: false
 			}
 		},
 	};
