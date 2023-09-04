@@ -37,7 +37,41 @@ export async function getInstance(
 		languages: meta.langs,
 		registrations: !meta.disableRegistration || response.registrations,
 		approval_required: !response.registrations,
-		invites_enabled: response.registrations,
+		invites_enabled: response.registrations, 
+		pleroma : {
+			metadata: {
+				account_activation_required: !response.registrations,
+				birthday_min_age: 0,
+				birthday_required: false,
+				features: [
+					"mastodon_api",
+					"mastodon_api_float",
+					"polls",
+					"relay",
+					"quote_posting",
+					"pleroma_emoji_reactions",
+					"pleroma_chat_messages",
+					"exposable_reactions",
+					"profile_directory"
+				],
+				federation: {
+					enabled : true
+				},
+				fields_limits: {
+					max_fields: 10,
+					max_remote_fields: 20,
+					name_length: 512,
+					value_length: 2048
+				},
+				post_formats: [
+					"text/x.misskeymarkdown"
+				]
+			},
+			stats: {
+				mau: 1,
+			},
+			vapid_public_key: meta.swPublicKey ? meta.swPublicKey : "",
+		},
 		configuration: {
 			accounts: {
 				max_featured_tags: 20,
