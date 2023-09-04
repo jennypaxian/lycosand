@@ -134,7 +134,8 @@ export const nodeinfo2 = async () => {
 			},
 			suggestions: {
 				enabled: false
-			}
+			},
+			staffAccounts: []
 		},
 	};
 };
