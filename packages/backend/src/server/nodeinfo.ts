@@ -23,7 +23,7 @@ export const links = [
 	},
 ];
 
-const nodeinfo2 = async () => {
+export const nodeinfo2 = async () => {
 	const now = Date.now();
 	const [meta, total, activeHalfyear, activeMonth, localPosts] =
 		await Promise.all([

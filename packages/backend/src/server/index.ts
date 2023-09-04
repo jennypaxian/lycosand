@@ -24,7 +24,7 @@ import * as Acct from "@/misc/acct.js";
 import { envOption } from "@/env.js";
 import megalodon, { MegalodonInterface } from "megalodon";
 import activityPub from "./activitypub.js";
-import nodeinfo from "./nodeinfo.js";
+import nodeinfo, { nodeinfo2 } from "./nodeinfo.js";
 import wellKnown from "./well-known.js";
 import apiServer from "./api/index.js";
 import fileServer from "./file/index.js";
@@ -34,6 +34,7 @@ import { initializeStreamingServer } from "./api/streaming.js";
 import { koaBody } from "koa-body";
 import removeTrailingSlash from "koa-remove-trailing-slashes";
 import { v4 as uuid } from "uuid";
+import { Cache } from "@/misc/cache.js";
 
 export const serverLogger = new Logger("server", "gray", false);
 
@@ -147,6 +148,22 @@ mastoRouter.get("/oauth/authorize", async (ctx) => {
 	ctx.redirect(
 		`${Buffer.from(client.toString(), "base64").toString()}?${param}`,
 	);
+});
+
+const cache = new Cache<Awaited<ReturnType<typeof nodeinfo2>>>(
+	"nodeinfo",
+	60 * 10,
+);
+
+
+mastoRouter.get("/nodeinfo/2.0.json", async (ctx) => {
+	const base = await cache.fetch(null, () => nodeinfo2());
+
+	// @ts-ignore
+	base.software.repository = undefined;
+
+	ctx.body = { version: "2.0", ...base };
+	ctx.set("Cache-Control", "public, max-age=600");
 });
 
 mastoRouter.post("/oauth/token", async (ctx) => {
