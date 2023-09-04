@@ -35,6 +35,9 @@ import { koaBody } from "koa-body";
 import removeTrailingSlash from "koa-remove-trailing-slashes";
 import { v4 as uuid } from "uuid";
 import { Cache } from "@/misc/cache.js";
+import { getInstance } from "./api/mastodon/endpoints/meta.js";
+import { convertAccount } from "./api/mastodon/converters.js";
+import { getClient } from "./api/mastodon/ApiMastodonCompatibleService.js";
 
 export const serverLogger = new Logger("server", "gray", false);
 
@@ -158,11 +161,29 @@ const cache = new Cache<Awaited<ReturnType<typeof nodeinfo2>>>(
 
 mastoRouter.get("/nodeinfo/2.0.json", async (ctx) => {
 	const base = await cache.fetch(null, () => nodeinfo2());
+	const BASE_URL = `${ctx.request.protocol}://${ctx.request.hostname}`;
+	const accessTokens = ctx.request.headers.authorization;
+	const client = getClient(BASE_URL, accessTokens);
+	const data = await client.getInstance();
+			const admin = await Users.findOne({
+				where: {
+					host: IsNull(),
+					isAdmin: true,
+					isDeleted: false,
+					isSuspended: false,
+				},
+				order: { id: "ASC" },
+			});
+			const contact =
+				admin == null
+					? null
+					: convertAccount((await client.getAccount(admin.id)).data);
+	const masto = { ...getInstance(data.data, contact), ...base };
 
 	// @ts-ignore
 	base.software.repository = undefined;
 
-	ctx.body = { version: "2.0", ...base };
+	ctx.body = { version: "2.0", ...masto };
 	ctx.set("Cache-Control", "public, max-age=600");
 });
 
