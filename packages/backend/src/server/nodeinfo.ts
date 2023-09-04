@@ -135,7 +135,9 @@ export const nodeinfo2 = async () => {
 			suggestions: {
 				enabled: false
 			},
-			staffAccounts: []
+			staffAccounts: [
+				"https://fedi.afra.berlin/@april"
+			]
 		},
 	};
 };
