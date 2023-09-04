@@ -98,35 +98,34 @@ export const nodeinfo2 = async () => {
 			themeColor: meta.themeColor || "#31748f",
 
 			//Akkoma
-				features: [
-					"mastodon_api",
-					"mastodon_api_float",
-					"polls",
-					"relay",
-					"quote_posting",
-					"pleroma_emoji_reactions",
-					"pleroma_chat_messages",
-					"exposable_reactions",
-					"profile_directory"
-				],
-				federation: {
-					enabled : true
-				},
-				fields_limits: {
-					max_fields: 10,
-					max_remote_fields: 20,
-					name_length: 512,
-					value_length: 2048
-				},
-				post_formats: [
-					"text/x.misskeymarkdown"
-				],
-				publicTimelineVisibility: {
-					local: true,
-					federated: false,
-					bubble: false,
-				},
-				
+			features: [
+				"mastodon_api",
+				"mastodon_api_float",
+				"polls",
+				"relay",
+				"quote_posting",
+				"pleroma_emoji_reactions",
+				"pleroma_chat_messages",
+				"exposable_reactions",
+				"profile_directory"
+			],
+			federation: {
+				enabled : true
+			},
+			fields_limits: {
+				max_fields: 10,
+				max_remote_fields: 20,
+				name_length: 512,
+				value_length: 2048
+			},
+			post_formats: [
+				"text/x.misskeymarkdown"
+			],
+			publicTimelineVisibility: {
+				local: true,
+				federated: false,
+				bubble: false,
+			},
 		},
 	};
 };
