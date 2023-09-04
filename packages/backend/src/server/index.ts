@@ -165,7 +165,7 @@ mastoRouter.get("/nodeinfo/2.0.json", async (ctx) => {
 	ctx.body = { 
 		version: "2.0", 
 	//...base };
-	...nodeinfo2() };
+	...(await nodeinfo2()) };
 	//ctx.set("Cache-Control", "public, max-age=600");
 });
 
