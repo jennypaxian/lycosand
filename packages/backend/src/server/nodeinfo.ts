@@ -137,6 +137,9 @@ export const nodeinfo2 = async () => {
 			},
 			staffAccounts: [
 				"https://fedi.afra.berlin/@april"
+			],
+			localBubbleInstances: [
+				"mk.absturztau.be"
 			]
 		},
 	};
