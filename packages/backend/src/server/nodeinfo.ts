@@ -126,6 +126,12 @@ export const nodeinfo2 = async () => {
 				federated: false,
 				bubble: false,
 			},
+			uploadLimits: {
+				background: 40000000,
+				avatar: 40000000,
+				banner: 40000000,
+				general: 40000000,
+			}
 		},
 	};
 };
