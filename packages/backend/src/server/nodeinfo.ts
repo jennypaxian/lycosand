@@ -122,7 +122,7 @@ export const nodeinfo2 = async () => {
 				"text/x.misskeymarkdown"
 			],
 			publicTimelineVisibility: {
-				local: true,
+				local: false,
 				federated: false,
 				bubble: false,
 			},
