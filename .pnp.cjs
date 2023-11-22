@@ -8446,6 +8446,7 @@ const RAW_RUNTIME_STATE =
           ["vue-isyourpasswordsafe", "npm:2.0.0"],\
           ["vue-plyr", "npm:7.0.0"],\
           ["vue-prism-editor", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:2.0.0-alpha.2"],\
+          ["vue-virtual-scroller", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:2.0.0-beta.8"],\
           ["vuedraggable", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:4.1.0"]\
         ],\
         "linkType": "SOFT"\
@@ -17837,6 +17838,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["mitt", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "./.yarn/cache/mitt-npm-2.1.0-77f3c96db4-d4087f8678.zip/node_modules/mitt/",\
+        "packageDependencies": [\
+          ["mitt", "npm:2.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["mixin-deep", [\
       ["npm:1.3.2", {\
         "packageLocation": "./.yarn/cache/mixin-deep-npm-1.3.2-29b528e571-820d5a51fc.zip/node_modules/mixin-deep/",\
@@ -24912,6 +24922,28 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["vue-observe-visibility", [\
+      ["npm:2.0.0-alpha.1", {\
+        "packageLocation": "./.yarn/cache/vue-observe-visibility-npm-2.0.0-alpha.1-2336a276e1-251948d4bd.zip/node_modules/vue-observe-visibility/",\
+        "packageDependencies": [\
+          ["vue-observe-visibility", "npm:2.0.0-alpha.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:1ff70a214f776664ffdd69e6c80dedbacd96b8cdab401980bd5ea13591b1cea0033ea9ca782fc6be0c2a7cbd792aa0bd2ba47d82b6b45a27a55d439ae67b26e0#npm:2.0.0-alpha.1", {\
+        "packageLocation": "./.yarn/__virtual__/vue-observe-visibility-virtual-38a3aa5843/0/cache/vue-observe-visibility-npm-2.0.0-alpha.1-2336a276e1-251948d4bd.zip/node_modules/vue-observe-visibility/",\
+        "packageDependencies": [\
+          ["vue-observe-visibility", "virtual:1ff70a214f776664ffdd69e6c80dedbacd96b8cdab401980bd5ea13591b1cea0033ea9ca782fc6be0c2a7cbd792aa0bd2ba47d82b6b45a27a55d439ae67b26e0#npm:2.0.0-alpha.1"],\
+          ["@types/vue", null],\
+          ["vue", "npm:3.3.4"]\
+        ],\
+        "packagePeers": [\
+          "@types/vue",\
+          "vue"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["vue-plyr", [\
       ["npm:7.0.0", {\
         "packageLocation": "./.yarn/cache/vue-plyr-npm-7.0.0-aab8325658-09f1cdd290.zip/node_modules/vue-plyr/",\
@@ -24937,6 +24969,53 @@ const RAW_RUNTIME_STATE =
           ["vue-prism-editor", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:2.0.0-alpha.2"],\
           ["@types/vue", null],\
           ["vue", "npm:3.3.4"]\
+        ],\
+        "packagePeers": [\
+          "@types/vue",\
+          "vue"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["vue-resize", [\
+      ["npm:2.0.0-alpha.1", {\
+        "packageLocation": "./.yarn/cache/vue-resize-npm-2.0.0-alpha.1-b3eb21b45c-d6e66472cd.zip/node_modules/vue-resize/",\
+        "packageDependencies": [\
+          ["vue-resize", "npm:2.0.0-alpha.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:1ff70a214f776664ffdd69e6c80dedbacd96b8cdab401980bd5ea13591b1cea0033ea9ca782fc6be0c2a7cbd792aa0bd2ba47d82b6b45a27a55d439ae67b26e0#npm:2.0.0-alpha.1", {\
+        "packageLocation": "./.yarn/__virtual__/vue-resize-virtual-7d46fa71e5/0/cache/vue-resize-npm-2.0.0-alpha.1-b3eb21b45c-d6e66472cd.zip/node_modules/vue-resize/",\
+        "packageDependencies": [\
+          ["vue-resize", "virtual:1ff70a214f776664ffdd69e6c80dedbacd96b8cdab401980bd5ea13591b1cea0033ea9ca782fc6be0c2a7cbd792aa0bd2ba47d82b6b45a27a55d439ae67b26e0#npm:2.0.0-alpha.1"],\
+          ["@types/vue", null],\
+          ["vue", "npm:3.3.4"]\
+        ],\
+        "packagePeers": [\
+          "@types/vue",\
+          "vue"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["vue-virtual-scroller", [\
+      ["npm:2.0.0-beta.8", {\
+        "packageLocation": "./.yarn/cache/vue-virtual-scroller-npm-2.0.0-beta.8-02cf134969-78047d2281.zip/node_modules/vue-virtual-scroller/",\
+        "packageDependencies": [\
+          ["vue-virtual-scroller", "npm:2.0.0-beta.8"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:2.0.0-beta.8", {\
+        "packageLocation": "./.yarn/__virtual__/vue-virtual-scroller-virtual-1ff70a214f/0/cache/vue-virtual-scroller-npm-2.0.0-beta.8-02cf134969-78047d2281.zip/node_modules/vue-virtual-scroller/",\
+        "packageDependencies": [\
+          ["vue-virtual-scroller", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:2.0.0-beta.8"],\
+          ["@types/vue", null],\
+          ["mitt", "npm:2.1.0"],\
+          ["vue", "npm:3.3.4"],\
+          ["vue-observe-visibility", "virtual:1ff70a214f776664ffdd69e6c80dedbacd96b8cdab401980bd5ea13591b1cea0033ea9ca782fc6be0c2a7cbd792aa0bd2ba47d82b6b45a27a55d439ae67b26e0#npm:2.0.0-alpha.1"],\
+          ["vue-resize", "virtual:1ff70a214f776664ffdd69e6c80dedbacd96b8cdab401980bd5ea13591b1cea0033ea9ca782fc6be0c2a7cbd792aa0bd2ba47d82b6b45a27a55d439ae67b26e0#npm:2.0.0-alpha.1"]\
         ],\
         "packagePeers": [\
           "@types/vue",\
