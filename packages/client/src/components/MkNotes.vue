@@ -71,11 +71,19 @@ defineExpose({
 	scrollTop,
 });
 
+const fetchedRecently = ref(false);
+
 setInterval(() => {
-	if (!tlEl.value) return;
+	if (!tlEl.value || fetchedRecently.value) return;
 	const viewport = document.documentElement.clientHeight;
 	const left = document.documentElement.scrollHeight - document.documentElement.scrollTop;
-	if (left <= viewport * 3) pagingComponent.value.fetchMore();
+	if (left <= viewport * 3) {
+		pagingComponent.value.fetchMore();
+		fetchedRecently.value = true;
+		setTimeout(() => {
+			fetchedRecently.value = false;
+		}, 500);
+	}
 }, 100);
 </script>
 
