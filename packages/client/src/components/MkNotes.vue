@@ -18,7 +18,7 @@
 					v-slot="{ item: note, index, active }"
 					:items="notes"
 					:min-item-size="10"
-					:buffer="200"
+					:buffer="600"
 					:class="{ noGap }"
 					listClass="notes"
 					itemClass="note"
