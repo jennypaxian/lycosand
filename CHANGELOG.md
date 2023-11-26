@@ -1,3 +1,14 @@
+## v2023.11.4
+This release contains an important security fix. Upgrading is therefore strongly recommended.
+
+### Bug fixes
+- HTTP signatures are now properly validated everywhere
+
+### Attribution
+This release was made possible by project contributors: Laura Hausmann
+
+It also includes cherry-picked contributions from external contributors: perillamint, yunochi
+
 ## v2023.11.3
 This release contains yet more packaging and distribution-related changes, including some required for packaging the project for NixOS.
 
