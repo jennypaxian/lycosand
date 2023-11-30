@@ -13,6 +13,7 @@ import type { User } from "@/models/entities/user.js";
 import type { Notification } from "@/models/entities/notification.js";
 import { sendEmailNotification } from "./send-email-notification.js";
 import { shouldSilenceInstance } from "@/misc/should-block-instance.js";
+import { MastodonPushHandler } from "@/server/api/mastodon/push/index.js";
 
 export async function createNotification(
 	notifieeId: User["id"],
@@ -75,6 +76,7 @@ export async function createNotification(
 
 	// Publish notification event
 	publishMainStream(notifieeId, "notification", packed);
+	MastodonPushHandler.sendPushNotification(notification);
 
 	// 2秒経っても(今回作成した)通知が既読にならなかったら「未読の通知がありますよ」イベントを発行する
 	setTimeout(async () => {

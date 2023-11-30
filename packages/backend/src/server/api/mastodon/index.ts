@@ -21,6 +21,7 @@ import { SetHeadersMiddleware } from "@/server/api/mastodon/middleware/set-heade
 import { UserHelpers } from "@/server/api/mastodon/helpers/user.js";
 import { ILocalUser } from "@/models/entities/user.js";
 import { setupEndpointsStreaming } from "@/server/api/mastodon/endpoints/streaming.js";
+import { setupEndpointsPush } from "@/server/api/mastodon/endpoints/push.js";
 
 export const logger = apiLogger.createSubLogger("mastodon");
 export type MastoContext = RouterContext & DefaultContext;
@@ -38,6 +39,7 @@ export function setupMastodonApi(router: Router): void {
     setupEndpointsMedia(router);
     setupEndpointsList(router);
     setupEndpointsMisc(router);
+	setupEndpointsPush(router);
 }
 
 function setupMiddleware(router: Router): void {

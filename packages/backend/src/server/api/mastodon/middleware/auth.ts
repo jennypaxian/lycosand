@@ -11,6 +11,7 @@ export async function AuthMiddleware(ctx: MastoContext, next: () => Promise<any>
 
     ctx.appId = token?.appId;
     ctx.user = token?.user ?? null as ILocalUser | null;
+	ctx.token = token ?? null;
     ctx.scopes = token?.scopes ?? [] as string[];
 
     await next();
