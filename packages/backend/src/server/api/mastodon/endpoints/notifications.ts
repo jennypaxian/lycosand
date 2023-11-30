@@ -20,7 +20,7 @@ export function setupEndpointsNotifications(router: Router): void {
         auth(true, ['read:notifications']),
         filterContext('notifications'),
         async (ctx) => {
-            const notification = await NotificationHelpers.getNotificationOr404(ctx.params.id, ctx);
+            const notification = await NotificationHelpers.getPushNotificationOr404(Number.parseInt(ctx.params.id), ctx);
             ctx.body = await NotificationConverter.encode(notification, ctx);
         }
     );
@@ -36,7 +36,7 @@ export function setupEndpointsNotifications(router: Router): void {
     router.post("/v1/notifications/:id/dismiss",
         auth(true, ['write:notifications']),
         async (ctx) => {
-            const notification = await NotificationHelpers.getNotificationOr404(ctx.params.id, ctx);
+            const notification = await NotificationHelpers.getPushNotificationOr404(Number.parseInt(ctx.params.id), ctx);
             await NotificationHelpers.dismissNotification(notification.id, ctx);
             ctx.body = {};
         }

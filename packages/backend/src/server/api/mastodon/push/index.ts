@@ -7,7 +7,6 @@ import { notificationTypes } from "@/types.js";
 
 export class MastodonPushHandler {
 	public static async sendPushNotification(n: Notification) {
-		const id = n.id;
 		const userId = n.notifieeId;
 		const type = this.encodeType(n.type);
 		if (type === null) return;
@@ -24,7 +23,7 @@ export class MastodonPushHandler {
 				access_token: subscription.token?.token,
 				title: meta.name ?? "Iceshrimp",
 				body: "You have unread notifications",
-				notification_id: id,
+				notification_id: n.mastoId,
 				notification_type: type,
 			};
 

@@ -24,7 +24,7 @@ export class NotificationConverter {
             : UserConverter.encode(localUser, ctx);
 
         let result = {
-            id: notification.id,
+            id: notification.mastoId.toString(),
             account: account,
             created_at: notification.createdAt.toISOString(),
             type: this.encodeNotificationType(notification.type),

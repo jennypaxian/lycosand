@@ -4,7 +4,7 @@ import {
 	JoinColumn,
 	ManyToOne,
 	Column,
-	PrimaryColumn,
+	PrimaryColumn, Generated,
 } from "typeorm";
 import { User } from "./user.js";
 import { id } from "../id.js";
@@ -181,4 +181,9 @@ export class Notification {
 	})
 	@JoinColumn()
 	public appAccessToken: AccessToken | null;
+
+	@Index({ unique: true })
+	@Column()
+	@Generated("increment")
+	public mastoId: number;
 }

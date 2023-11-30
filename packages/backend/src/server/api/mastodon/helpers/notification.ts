@@ -51,6 +51,18 @@ export class NotificationHelpers {
         });
     }
 
+	public static async getPushNotification(id: number, ctx: MastoContext): Promise<Notification | null> {
+		const user = ctx.user as ILocalUser;
+		return Notifications.findOneBy({ mastoId: id, notifieeId: user.id });
+	}
+
+	public static async getPushNotificationOr404(id: number, ctx: MastoContext): Promise<Notification> {
+		return this.getPushNotification(id, ctx).then(p => {
+			if (p) return p;
+			throw new MastoApiError(404);
+		});
+	}
+
     public static async dismissNotification(id: string, ctx: MastoContext): Promise<void> {
         const user = ctx.user as ILocalUser;
         await Notifications.update({ id: id, notifieeId: user.id }, { isRead: true });
