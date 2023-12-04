@@ -63,7 +63,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as Acct from "iceshrimp-js/built/acct";
+import { Acct } from "@/iceshrimp-js";
 import { i18n } from "@/i18n";
 import { acct } from "@/filters/user";
 import { $i } from "@/account";

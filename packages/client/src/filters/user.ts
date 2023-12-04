@@ -1,9 +1,10 @@
-import * as misskey from "iceshrimp-js";
-import * as Acct from "iceshrimp-js/built/acct";
+import * as misskey from "@/iceshrimp-js";
+import { Acct } from "@/iceshrimp-js"
 import { url } from "@/config";
+import { ParsedAcct } from "@/iceshrimp-js/acct.js";
 
-export const acct = (user: misskey.Acct) => {
-	return Acct.toString(user);
+export const acct = (user: ParsedAcct) => {
+	return new Acct(user.username, user.host).toString();
 };
 
 export const userName = (user: misskey.entities.User) => {

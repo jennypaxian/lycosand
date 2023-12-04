@@ -18,11 +18,15 @@ export const apiUrl = `${url}/api`;
 export const wsUrl = `${url
 	.replace("http://", "ws://")
 	.replace("https://", "wss://")}/streaming`;
-export const lang = localStorage.getItem("lang");
+export const lang = localStorage.getItem("lang") ?? 'en-US';
 export const langs = _LANGS_;
-export const locale = JSON.parse(localStorage.getItem("locale"));
+export let locale = JSON.parse(localStorage.getItem("locale"));
 export const version = _VERSION_;
 export const instanceName = siteName === "Iceshrimp" ? host : siteName;
 export let searchEngine = 'https://duckduckgo.com/?q=';
 export const ui = localStorage.getItem("ui");
 export const debug = localStorage.getItem("debug") === "true";
+
+export function updateLocale(newLocale: any): void {
+	locale = newLocale;
+}

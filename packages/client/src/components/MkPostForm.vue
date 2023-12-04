@@ -235,11 +235,11 @@
 <script lang="ts" setup>
 import { inject, watch, nextTick, onMounted, defineAsyncComponent } from "vue";
 import * as mfm from "mfm-js";
-import * as misskey from "iceshrimp-js";
+import * as misskey from "@/iceshrimp-js";
 import insertTextAtCursor from "insert-text-at-cursor";
 import { length } from "stringz";
 import { toASCII } from "punycode/";
-import * as Acct from "iceshrimp-js/built/acct";
+import { Acct } from "@/iceshrimp-js"
 import { throttle } from "throttle-debounce";
 import XNoteSimple from "@/components/MkNoteSimple.vue";
 import XNotePreview from "@/components/MkNotePreview.vue";

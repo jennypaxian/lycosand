@@ -378,6 +378,7 @@ watch(swipeOnDesktop, () => {
 watch(lang, () => {
 	localStorage.setItem("lang", lang.value as string);
 	localStorage.removeItem("locale");
+	localStorage.removeItem('localeVersion');
 });
 
 watch(fontSize, () => {

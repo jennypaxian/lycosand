@@ -89,7 +89,7 @@
 
 <script lang="ts" setup>
 import { ref, markRaw, onMounted, onUnmounted, watch } from "vue";
-import * as Acct from "iceshrimp-js/built/acct";
+import { Acct } from "@/iceshrimp-js"
 import { Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import MkButton from "@/components/MkButton.vue";

@@ -1,4 +1,4 @@
-import * as Acct from "iceshrimp-js/built/acct";
+import { Acct } from "@/iceshrimp-js"
 import { defineAsyncComponent } from "vue";
 import { i18n } from "@/i18n";
 import copyToClipboard from "@/scripts/copy-to-clipboard";

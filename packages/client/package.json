@@ -17,6 +17,7 @@
 		"@phosphor-icons/web": "^2.0.3",
 		"@rollup/plugin-alias": "3.1.9",
 		"@rollup/plugin-json": "4.1.0",
+		"@rollup/plugin-replace": "^5.0.5",
 		"@rollup/pluginutils": "^4.2.1",
 		"@syuilo/aiscript": "0.11.1",
 		"@types/escape-regexp": "0.0.1",
@@ -57,7 +58,6 @@
 		"focus-trap": "^7.5.2",
 		"focus-trap-vue": "^4.0.2",
 		"gsap": "^3.12.2",
-		"iceshrimp-js": "workspace:*",
 		"idb-keyval": "6.2.1",
 		"insert-text-at-cursor": "0.3.0",
 		"json5": "2.2.3",
@@ -103,6 +103,7 @@
 	},
 	"dependencies": {
 		"@babel/core": "^7.23.2",
-		"eslint": "^8.45.0"
+		"eslint": "^8.45.0",
+		"reconnecting-websocket": "^4.4.0"
 	}
 }

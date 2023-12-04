@@ -3239,6 +3239,30 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@rollup/plugin-replace", [\
+      ["npm:5.0.5", {\
+        "packageLocation": "./.yarn/cache/@rollup-plugin-replace-npm-5.0.5-42f61be6e8-bcf106346f.zip/node_modules/@rollup/plugin-replace/",\
+        "packageDependencies": [\
+          ["@rollup/plugin-replace", "npm:5.0.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:5.0.5", {\
+        "packageLocation": "./.yarn/__virtual__/@rollup-plugin-replace-virtual-bb6943b0cc/0/cache/@rollup-plugin-replace-npm-5.0.5-42f61be6e8-bcf106346f.zip/node_modules/@rollup/plugin-replace/",\
+        "packageDependencies": [\
+          ["@rollup/plugin-replace", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:5.0.5"],\
+          ["@rollup/pluginutils", "virtual:bb6943b0cca2c422f7a7afd65919f64a13f4e8693f7906299796ebe01591897f1a7622cbd9bd4db684f8c6acc1f55e4a4d48e34b460bcd763b5121a2b479f420#npm:5.1.0"],\
+          ["@types/rollup", null],\
+          ["magic-string", "npm:0.30.5"],\
+          ["rollup", "npm:3.26.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/rollup",\
+          "rollup"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@rollup/pluginutils", [\
       ["npm:3.1.0", {\
         "packageLocation": "./.yarn/cache/@rollup-pluginutils-npm-3.1.0-b44b222e7d-3b69f02893.zip/node_modules/@rollup/pluginutils/",\
@@ -3253,6 +3277,29 @@ const RAW_RUNTIME_STATE =
           ["@rollup/pluginutils", "npm:4.2.1"],\
           ["estree-walker", "npm:2.0.2"],\
           ["picomatch", "npm:2.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.1.0", {\
+        "packageLocation": "./.yarn/cache/@rollup-pluginutils-npm-5.1.0-6939820ef8-abb15eaec5.zip/node_modules/@rollup/pluginutils/",\
+        "packageDependencies": [\
+          ["@rollup/pluginutils", "npm:5.1.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:bb6943b0cca2c422f7a7afd65919f64a13f4e8693f7906299796ebe01591897f1a7622cbd9bd4db684f8c6acc1f55e4a4d48e34b460bcd763b5121a2b479f420#npm:5.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-2c209a0117/0/cache/@rollup-pluginutils-npm-5.1.0-6939820ef8-abb15eaec5.zip/node_modules/@rollup/pluginutils/",\
+        "packageDependencies": [\
+          ["@rollup/pluginutils", "virtual:bb6943b0cca2c422f7a7afd65919f64a13f4e8693f7906299796ebe01591897f1a7622cbd9bd4db684f8c6acc1f55e4a4d48e34b460bcd763b5121a2b479f420#npm:5.1.0"],\
+          ["@types/estree", "npm:1.0.1"],\
+          ["@types/rollup", null],\
+          ["estree-walker", "npm:2.0.2"],\
+          ["picomatch", "npm:2.3.1"],\
+          ["rollup", "npm:3.26.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/rollup",\
+          "rollup"\
         ],\
         "linkType": "HARD"\
       }],\
@@ -8537,6 +8584,7 @@ const RAW_RUNTIME_STATE =
           ["@phosphor-icons/web", "npm:2.0.3"],\
           ["@rollup/plugin-alias", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:3.1.9"],\
           ["@rollup/plugin-json", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:4.1.0"],\
+          ["@rollup/plugin-replace", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:5.0.5"],\
           ["@rollup/pluginutils", "npm:4.2.1"],\
           ["@syuilo/aiscript", "npm:0.11.1"],\
           ["@types/escape-regexp", "npm:0.0.1"],\
@@ -8592,6 +8640,7 @@ const RAW_RUNTIME_STATE =
           ["prismjs", "npm:1.29.0"],\
           ["punycode", "npm:2.3.0"],\
           ["querystring", "npm:0.2.1"],\
+          ["reconnecting-websocket", "npm:4.4.0"],\
           ["rndstr", "npm:1.0.0"],\
           ["rollup", "npm:3.26.2"],\
           ["s-age", "npm:1.1.2"],\

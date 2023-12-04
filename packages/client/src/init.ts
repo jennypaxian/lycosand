@@ -32,10 +32,10 @@ import { compareVersions } from "compare-versions";
 import widgets from "@/widgets";
 import directives from "@/directives";
 import components from "@/components";
-import { version, ui, lang, setHost, setSearchEngine } from "@/config";
+import { version, ui, lang, setHost, setSearchEngine, updateLocale } from "@/config";
 import { applyTheme } from "@/scripts/theme";
 import { isDeviceDarkmode } from "@/scripts/is-device-darkmode";
-import { i18n } from "@/i18n";
+import { i18n, updateI18n } from "@/i18n";
 import { confirm, alert, post, popup, toast, api } from "@/os";
 import { stream } from "@/stream";
 import * as sound from "@/scripts/sound";
@@ -95,6 +95,23 @@ function checkForSplash() {
 			*/
 		});
 	}
+
+
+	//#region Detect language & fetch translations
+	const localeVersion = localStorage.getItem('localeVersion');
+	const localeOutdated = (localeVersion == null || localeVersion !== version);
+	if (localeOutdated) {
+		const res = await window.fetch(`/assets/locales/${lang}.${version}.json`);
+		if (res.status === 200) {
+			const newLocale = await res.text();
+			const parsedNewLocale = JSON.parse(newLocale);
+			localStorage.setItem('locale', newLocale);
+			localStorage.setItem('localeVersion', version);
+			updateLocale(parsedNewLocale);
+			updateI18n(parsedNewLocale);
+		}
+	}
+	//#endregion
 
 	// タッチデバイスでCSSの:hoverを機能させる
 	document.addEventListener("touchend", () => {}, { passive: true });
@@ -363,6 +380,10 @@ function checkForSplash() {
 					JSON.parse(instance.defaultDarkTheme),
 				);
 			defaultStore.set("themeInitial", false);
+		} else if (defaultStore.state.darkMode) {
+			applyTheme(darkTheme.value);
+		} else {
+			applyTheme(lightTheme.value);
 		}
 	});
 
