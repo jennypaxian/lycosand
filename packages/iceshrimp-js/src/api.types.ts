@@ -34,7 +34,7 @@ import {
 	NoteReaction,
 	Signin,
 	MessagingMessage,
-} from "./entities";
+} from "./entities.js";
 
 type TODO = Record<string, any> | null;
 

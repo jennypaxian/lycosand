@@ -1,6 +1,6 @@
 import { EventEmitter } from "eventemitter3";
 import ReconnectingWebsocket from "reconnecting-websocket";
-import { BroadcastEvents, Channels } from "./streaming.types";
+import { BroadcastEvents, Channels } from "./streaming.types.js";
 
 function autobind(instance: any): void {
 	const prototype = Object.getPrototypeOf(instance);

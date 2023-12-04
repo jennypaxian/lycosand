@@ -9,7 +9,7 @@ import type {
 	PageEvent,
 	User,
 	UserGroup,
-} from "./entities";
+} from "./entities.js";
 
 type FIXME = any;
 
