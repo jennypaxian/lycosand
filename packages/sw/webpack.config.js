@@ -1,6 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
-const locales = require("../../locales");
+const locales = require("../../locales/legacy.cjs");
 const meta = require("../../package.json");
 
 const isProduction = process.env.NODE_ENV === "production";

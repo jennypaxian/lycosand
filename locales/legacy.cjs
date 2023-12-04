@@ -2,8 +2,8 @@
  * Languages Loader
  */
 
-import * as fs from 'node:fs';
-import * as yaml from 'js-yaml';
+const fs = require("fs");
+const yaml = require("js-yaml");
 const languages = [];
 const languages_custom = [];
 const customDir = process.env.ICESHRIMP_CUSTOM_DIR ?? __dirname + "/../custom";

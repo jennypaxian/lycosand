@@ -9,6 +9,7 @@
 		"lint:vue": "paralint --ext .vue --fix '**/*.vue' --cache",
 		"format": "biome format * --write && prettier --write '**/*.{scss,vue}' --cache --cache-strategy metadata"
 	},
+	"type": "module",
 	"devDependencies": {
 		"@discordapp/twemoji": "14.1.2",
 		"@eslint-sets/eslint-config-vue3": "^5.6.1",

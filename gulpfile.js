@@ -8,7 +8,7 @@ const replace = require("gulp-replace");
 const terser = require("gulp-terser");
 const cssnano = require("gulp-cssnano");
 
-const locales = require("./locales");
+const locales = require("./locales/legacy.cjs");
 const meta = require("./package.json");
 const customDir = process.env.ICESHRIMP_CUSTOM_DIR ?? "./custom";
 
