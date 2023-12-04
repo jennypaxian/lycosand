@@ -54,7 +54,6 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import * as Acct from "iceshrimp-js/built/acct";
-import MkSwitch from "@/components/ui/switch.vue";
 import MkPagination from "@/components/MkPagination.vue";
 import MkDriveFileThumbnail from "@/components/MkDriveFileThumbnail.vue";
 import bytes from "@/filters/bytes";
