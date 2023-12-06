@@ -1140,6 +1140,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hapi/boom@npm:^10.0.1":
+  version: 10.0.1
+  resolution: "@hapi/boom@npm:10.0.1"
+  dependencies:
+    "@hapi/hoek": "npm:^11.0.2"
+  checksum: 99415b0e2f6aeefae91475e9215620d6cb0cc9f16b836e052c006cffb59cf39c45f724e545c2c50ba036d786c6c7935bffc97ae1cb504c65d2540d200bd40fff
+  languageName: node
+  linkType: hard
+
+"@hapi/hoek@npm:^11.0.2":
+  version: 11.0.4
+  resolution: "@hapi/hoek@npm:11.0.4"
+  checksum: 0cf1c0dbd203701baccae2a78fc2381a77a2f5d2e46722a99c004ddb7eb7440da1bdeb58605acb1afd3287c940e88eec54ec5a35296bcda11e789092b0e58c36
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^9.0.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -1178,6 +1194,27 @@ __metadata:
   version: 1.2.1
   resolution: "@humanwhocodes/object-schema@npm:1.2.1"
   checksum: b48a8f87fcd5fdc4ac60a31a8bf710d19cc64556050575e6a35a4a48a8543cf8cde1598a65640ff2cdfbfd165b38f9db4fa3782bea7848eb585cc3db824002e6
+  languageName: node
+  linkType: hard
+
+"@iceshrimp/koa-openapi@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@iceshrimp/koa-openapi@npm:2.2.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.2.0%2Fkoa-openapi-2.2.0.tgz"
+  dependencies:
+    "@hapi/boom": "npm:^10.0.1"
+    "@koa/cors": "npm:^4.0.0"
+    "@koa/router": "npm:^12.0.1"
+    class-transformer: "npm:*"
+    class-validator: "npm:*"
+    helmet: "npm:6.0.1"
+    koa: "npm:^2.14.2"
+    koa-body: "npm:*"
+    koa-helmet: "npm:^7.0.2"
+    koa2-swagger-ui: "npm:^5.9.1"
+    lodash: "npm:^4.17.21"
+    openapi-types: "npm:^12.1.3"
+    reflect-metadata: "npm:*"
+  checksum: a7ff2c0b1a6fa54dacb9cc9a84d6a3008928f76396e47be42ddf93456f98c55bca42b027db378035b7f9d336ee703e44deb2a0e7d55167ddb081ff066c27f0a0
   languageName: node
   linkType: hard
 
@@ -1526,6 +1563,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@koa/cors@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@koa/cors@npm:4.0.0"
+  dependencies:
+    vary: "npm:^1.1.2"
+  checksum: 1509d98b72e321dda99a78b28626142a473533c84bde72b4ee7a76716bd91243765ec3d1790a214e4c5b4c398e72a6abace77f04dbcc7c499c955eed943494f0
+  languageName: node
+  linkType: hard
+
 "@koa/multer@npm:3.0.2":
   version: 3.0.2
   resolution: "@koa/multer@npm:3.0.2"
@@ -1547,6 +1593,19 @@ __metadata:
     methods: "npm:^1.1.2"
     path-to-regexp: "npm:^6.1.0"
   checksum: bd13ffa9e39835fe21f69e704125bad5a76b150938dd6d4ce3ad6b9aaa08918c9221316b75356fbadf2442907aefcaf2a213854d76fda06861cb87c344c4f6d3
+  languageName: node
+  linkType: hard
+
+"@koa/router@npm:^12.0.1":
+  version: 12.0.1
+  resolution: "@koa/router@npm:12.0.1"
+  dependencies:
+    debug: "npm:^4.3.4"
+    http-errors: "npm:^2.0.0"
+    koa-compose: "npm:^4.1.0"
+    methods: "npm:^1.1.2"
+    path-to-regexp: "npm:^6.2.1"
+  checksum: f9427c8eb21a2d7c880dae192b7298ecb243af32a8270b5e3e32c4420da157111bc326ab0bc75ff0f17320b9d9ab9df235295fc2d53d8681b5a14103c27ad22d
   languageName: node
   linkType: hard
 
@@ -3053,6 +3112,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/koa-ratelimit@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "@types/koa-ratelimit@npm:5.0.4"
+  dependencies:
+    "@types/koa": "npm:*"
+    "@types/node": "npm:*"
+    ioredis: "npm:^5.2.3"
+  checksum: 5233eec4658d1300656cb5ecd8d55fa2ea7bed8310409c225ff975782844478d2f1bf722bdf87b81e0b270c010d9771287774f87e9fc2d766e908be82a69f398
+  languageName: node
+  linkType: hard
+
 "@types/koa-send@npm:4.1.3":
   version: 4.1.3
   resolution: "@types/koa-send@npm:4.1.3"
@@ -3071,7 +3141,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/koa@npm:*, @types/koa@npm:^2.13.5":
+"@types/koa@npm:*, @types/koa@npm:2.13.7, @types/koa@npm:^2.13.5":
   version: 2.13.7
   resolution: "@types/koa@npm:2.13.7"
   dependencies:
@@ -3084,22 +3154,6 @@ __metadata:
     "@types/koa-compose": "npm:*"
     "@types/node": "npm:*"
   checksum: 4856cb68f7f7f98a3bfc0831692a739c28d8f9993d7c64b973c6bf8be515b70227a0234eb35a0c395e9c9aaddaa6f67d5a949dcc2550a3794ad96f1d6f45ac07
-  languageName: node
-  linkType: hard
-
-"@types/koa@npm:2.13.6":
-  version: 2.13.6
-  resolution: "@types/koa@npm:2.13.6"
-  dependencies:
-    "@types/accepts": "npm:*"
-    "@types/content-disposition": "npm:*"
-    "@types/cookies": "npm:*"
-    "@types/http-assert": "npm:*"
-    "@types/http-errors": "npm:*"
-    "@types/keygrip": "npm:*"
-    "@types/koa-compose": "npm:*"
-    "@types/node": "npm:*"
-  checksum: cba52d2418668a2b7b6e8da791faab019584b50f7820130082cd97d46386f2a4c4a7bc59eecd734b98ca73ee8df9cda22485eb7e72738da223f54632dd0a020e
   languageName: node
   linkType: hard
 
@@ -3515,6 +3569,13 @@ __metadata:
   version: 9.0.2
   resolution: "@types/uuid@npm:9.0.2"
   checksum: 1754bcf3444e1e3aeadd6e774fc328eb53bc956665e2e8fb6ec127aa8e1f43d9a224c3d22a9a6233dca8dd81a12dc7fed4d84b8876dd5ec82d40f574f7ff8b68
+  languageName: node
+  linkType: hard
+
+"@types/validator@npm:^13.7.10":
+  version: 13.11.7
+  resolution: "@types/validator@npm:13.11.7"
+  checksum: 5935d363a9a6099ee6a2100ae3be46d9d1f113dbea16e03b627b48b2f746f01100535febc564d215a7054dd9a632ec0cda10ecd6a75d088e3e38834290fb76f6
   languageName: node
   linkType: hard
 
@@ -4961,6 +5022,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"async-ratelimiter@npm:^1.3.0":
+  version: 1.3.12
+  resolution: "async-ratelimiter@npm:1.3.12"
+  checksum: bf492d85a3d9caa6a1a36be80f17c85afba4e2911228a50c73ad2bd14e775e7a140d690fba20948d994f4d33e8aaa4b5de4feabb618b971531bce4fe2b6764ce
+  languageName: node
+  linkType: hard
+
 "async-settle@npm:^1.0.0":
   version: 1.0.0
   resolution: "async-settle@npm:1.0.0"
@@ -5248,6 +5316,8 @@ __metadata:
     "@bull-board/koa": "npm:5.6.0"
     "@bull-board/ui": "npm:5.6.0"
     "@discordapp/twemoji": "npm:14.1.2"
+    "@hapi/boom": "npm:^10.0.1"
+    "@iceshrimp/koa-openapi": "npm:^2.2.0"
     "@koa/cors": "npm:3.4.3"
     "@koa/multer": "npm:3.0.2"
     "@koa/router": "npm:9.0.1"
@@ -5270,12 +5340,13 @@ __metadata:
     "@types/jsdom": "npm:21.1.1"
     "@types/jsonld": "npm:1.5.9"
     "@types/jsrsasign": "npm:10.5.8"
-    "@types/koa": "npm:2.13.6"
+    "@types/koa": "npm:2.13.7"
     "@types/koa-bodyparser": "npm:4.3.10"
     "@types/koa-cors": "npm:0.0.2"
     "@types/koa-favicon": "npm:2.0.21"
     "@types/koa-logger": "npm:3.1.2"
     "@types/koa-mount": "npm:4.0.2"
+    "@types/koa-ratelimit": "npm:^5.0.4"
     "@types/koa-send": "npm:4.1.3"
     "@types/koa-views": "npm:7.0.0"
     "@types/koa__cors": "npm:3.3.0"
@@ -5358,6 +5429,7 @@ __metadata:
     koa-json-body: "npm:5.3.0"
     koa-logger: "npm:3.2.1"
     koa-mount: "npm:4.0.0"
+    koa-ratelimit: "npm:^5.1.0"
     koa-remove-trailing-slashes: "npm:2.0.3"
     koa-send: "npm:5.0.1"
     koa-slow: "npm:2.1.0"
@@ -6381,6 +6453,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-transformer@npm:*":
+  version: 0.5.1
+  resolution: "class-transformer@npm:0.5.1"
+  checksum: 750327e3e9a5cf233c5234252f4caf6b06c437bf68a24acbdcfb06c8e0bfff7aa97c30428184813e38e08111b42871f20c5cf669ea4490f8ae837c09f08b31e7
+  languageName: node
+  linkType: hard
+
 "class-utils@npm:^0.3.5":
   version: 0.3.6
   resolution: "class-utils@npm:0.3.6"
@@ -6390,6 +6469,17 @@ __metadata:
     isobject: "npm:^3.0.0"
     static-extend: "npm:^0.1.1"
   checksum: b236d9deb6594828966e45c5f48abac9a77453ee0dbdb89c635ce876f59755d7952309d554852b6f7d909198256c335a4bd51b09c1d238b36b92152eb2b9d47a
+  languageName: node
+  linkType: hard
+
+"class-validator@npm:*":
+  version: 0.14.0
+  resolution: "class-validator@npm:0.14.0"
+  dependencies:
+    "@types/validator": "npm:^13.7.10"
+    libphonenumber-js: "npm:^1.10.14"
+    validator: "npm:^13.7.0"
+  checksum: bf550a4ab7b424467737c75e7e6171a45fe010ccab6af50793539d9d2e1f5cce1a35fbc8b11f9a5de4f049852f768232acca16f05cf80993a36369b494560f44
   languageName: node
   linkType: hard
 
@@ -10761,6 +10851,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"handlebars@npm:^4.7.8":
+  version: 4.7.8
+  resolution: "handlebars@npm:4.7.8"
+  dependencies:
+    minimist: "npm:^1.2.5"
+    neo-async: "npm:^2.6.2"
+    source-map: "npm:^0.6.1"
+    uglify-js: "npm:^3.1.4"
+    wordwrap: "npm:^1.0.0"
+  dependenciesMeta:
+    uglify-js:
+      optional: true
+  bin:
+    handlebars: bin/handlebars
+  checksum: bd528f4dd150adf67f3f857118ef0fa43ff79a153b1d943fa0a770f2599e38b25a7a0dbac1a3611a4ec86970fd2325a81310fb788b5c892308c9f8743bd02e11
+  languageName: node
+  linkType: hard
+
 "happy-dom@npm:^12.10.3":
   version: 12.10.3
   resolution: "happy-dom@npm:12.10.3"
@@ -10915,6 +11023,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"helmet@npm:6.0.1":
+  version: 6.0.1
+  resolution: "helmet@npm:6.0.1"
+  checksum: 0eec311e1a3820e206226563e55d7115fa66e9a34922229472c1dac407c5d00f0d5c4f5f7afed714fba40287aac1c30dcbfa9b3c096f1146f9d6a55c4527d65d
+  languageName: node
+  linkType: hard
+
+"helmet@npm:^6.0.1":
+  version: 6.2.0
+  resolution: "helmet@npm:6.2.0"
+  checksum: f112fcd0d8494e6c8ad10e9307e182f1be9c9c4917a3f9a3718c13ae120d4c4e1f251e735297d6a9266e068dcc0463ab101c8d7f2b809c0ceabcef4681f81a2a
+  languageName: node
+  linkType: hard
+
 "hexoid@npm:^1.0.0":
   version: 1.0.0
   resolution: "hexoid@npm:1.0.0"
@@ -11043,7 +11165,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-errors@npm:2.0.0":
+"http-errors@npm:2.0.0, http-errors@npm:^2.0.0":
   version: 2.0.0
   resolution: "http-errors@npm:2.0.0"
   dependencies:
@@ -11501,7 +11623,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ioredis@npm:5.3.2, ioredis@npm:^5.0.0":
+"ioredis@npm:5.3.2, ioredis@npm:^5.0.0, ioredis@npm:^5.2.3":
   version: 5.3.2
   resolution: "ioredis@npm:5.3.2"
   dependencies:
@@ -13474,7 +13596,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"koa-body@npm:^6.0.1":
+"koa-body@npm:*, koa-body@npm:^6.0.1":
   version: 6.0.1
   resolution: "koa-body@npm:6.0.1"
   dependencies:
@@ -13525,6 +13647,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"koa-helmet@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "koa-helmet@npm:7.0.2"
+  dependencies:
+    helmet: "npm:^6.0.1"
+  checksum: a2f8f72f053402fd8b70deb219ab1535cb6dbc8975ae9bd84d2a976a88a2349f47289485d5db718f21c4d493a9555e8b4bb962119f47d2b0ff95877edc232004
+  languageName: node
+  linkType: hard
+
 "koa-json-body@npm:5.3.0":
   version: 5.3.0
   resolution: "koa-json-body@npm:5.3.0"
@@ -13553,6 +13684,17 @@ __metadata:
     debug: "npm:^4.0.1"
     koa-compose: "npm:^4.1.0"
   checksum: c7e8c5cca4d2ccc4742e63c81b86b44f0290075148897b5d633acdd137e90f554c60c232fbc62e843eaedb913b67c5a49367c1142e290b8cfd9c28eb4a0480ec
+  languageName: node
+  linkType: hard
+
+"koa-ratelimit@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "koa-ratelimit@npm:5.1.0"
+  dependencies:
+    async-ratelimiter: "npm:^1.3.0"
+    debug: "npm:^4.1.1"
+    ms: "npm:^2.1.2"
+  checksum: 09c718b72750c590eef55b59236457e6c9cfdbe7e5b07a955549e421f08ba92c41c3c32e538700dc932c8be628814ec6a4cac9e79f53a3243fda92915412c838
   languageName: node
   linkType: hard
 
@@ -13647,6 +13789,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"koa2-swagger-ui@npm:^5.9.1":
+  version: 5.10.0
+  resolution: "koa2-swagger-ui@npm:5.10.0"
+  dependencies:
+    handlebars: "npm:^4.7.8"
+    lodash: "npm:^4.17.21"
+    read-pkg-up: "npm:7.0.1"
+  peerDependencies:
+    "@types/koa": "*"
+  checksum: 40575d377ddb264ec6f2d19290d02dd52cd9e6d392437b2fdfa208975559c6ebdf4b0938f46ded32aea0bb91263f7a7676df49d191d7e07a1cc0ce5ab1e34fe0
+  languageName: node
+  linkType: hard
+
 "koa@npm:2.13.4":
   version: 2.13.4
   resolution: "koa@npm:2.13.4"
@@ -13678,7 +13833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"koa@npm:2.14.2, koa@npm:^2.13.1":
+"koa@npm:2.14.2, koa@npm:^2.13.1, koa@npm:^2.14.2":
   version: 2.14.2
   resolution: "koa@npm:2.14.2"
   dependencies:
@@ -13790,6 +13945,13 @@ __metadata:
     prelude-ls: "npm:^1.2.1"
     type-check: "npm:~0.4.0"
   checksum: 2e4720ff79f21ae08d42374b0a5c2f664c5be8b6c8f565bb4e1315c96ed3a8acaa9de788ffed82d7f2378cf36958573de07ef92336cb5255ed74d08b8318c9ee
+  languageName: node
+  linkType: hard
+
+"libphonenumber-js@npm:^1.10.14":
+  version: 1.10.51
+  resolution: "libphonenumber-js@npm:1.10.51"
+  checksum: 925fda2ecba5d1e655f9d6e43cd15b2d41f7fe9db38828f4159442bc263ae959a26f212223336831c6f64e58b82e91477f7ac814d66b48c80e5852529545032b
   languageName: node
   linkType: hard
 
@@ -14796,7 +14958,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.3, ms@npm:^2.0.0, ms@npm:^2.1.1":
+"ms@npm:2.1.3, ms@npm:^2.0.0, ms@npm:^2.1.1, ms@npm:^2.1.2":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
@@ -15555,6 +15717,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"openapi-types@npm:^12.1.3":
+  version: 12.1.3
+  resolution: "openapi-types@npm:12.1.3"
+  checksum: 9d1d7ed848622b63d0a4c3f881689161b99427133054e46b8e3241e137f1c78bb0031c5d80b420ee79ac2e91d2e727ffd6fc13c553d1b0488ddc8ad389dcbef8
+  languageName: node
+  linkType: hard
+
 "opencollective-postinstall@npm:^2.0.2":
   version: 2.0.3
   resolution: "opencollective-postinstall@npm:2.0.3"
@@ -15995,7 +16164,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-to-regexp@npm:^6.1.0":
+"path-to-regexp@npm:^6.1.0, path-to-regexp@npm:^6.2.1":
   version: 6.2.1
   resolution: "path-to-regexp@npm:6.2.1"
   checksum: 1e266be712d1a08086ee77beab12a1804842ec635dfed44f9ee1ba960a0e01cec8063fb8c92561115cdc0ce73158cdc7766e353ffa039340b4a85b370084c4d4
@@ -17408,17 +17577,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"read-pkg-up@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "read-pkg-up@npm:1.0.1"
-  dependencies:
-    find-up: "npm:^1.0.0"
-    read-pkg: "npm:^1.0.0"
-  checksum: d18399a0f46e2da32beb2f041edd0cda49d2f2cc30195a05c759ef3ed9b5e6e19ba1ad1bae2362bdec8c6a9f2c3d18f4d5e8c369e808b03d498d5781cb9122c7
-  languageName: node
-  linkType: hard
-
-"read-pkg-up@npm:^7.0.0, read-pkg-up@npm:^7.0.1":
+"read-pkg-up@npm:7.0.1, read-pkg-up@npm:^7.0.0, read-pkg-up@npm:^7.0.1":
   version: 7.0.1
   resolution: "read-pkg-up@npm:7.0.1"
   dependencies:
@@ -17426,6 +17585,16 @@ __metadata:
     read-pkg: "npm:^5.2.0"
     type-fest: "npm:^0.8.1"
   checksum: e4e93ce70e5905b490ca8f883eb9e48b5d3cebc6cd4527c25a0d8f3ae2903bd4121c5ab9c5a3e217ada0141098eeb661313c86fa008524b089b8ed0b7f165e44
+  languageName: node
+  linkType: hard
+
+"read-pkg-up@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "read-pkg-up@npm:1.0.1"
+  dependencies:
+    find-up: "npm:^1.0.0"
+    read-pkg: "npm:^1.0.0"
+  checksum: d18399a0f46e2da32beb2f041edd0cda49d2f2cc30195a05c759ef3ed9b5e6e19ba1ad1bae2362bdec8c6a9f2c3d18f4d5e8c369e808b03d498d5781cb9122c7
   languageName: node
   linkType: hard
 
@@ -17617,7 +17786,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reflect-metadata@npm:0.1.13, reflect-metadata@npm:^0.1.13":
+"reflect-metadata@npm:*, reflect-metadata@npm:0.1.13, reflect-metadata@npm:^0.1.13":
   version: 0.1.13
   resolution: "reflect-metadata@npm:0.1.13"
   checksum: 732570da35d2d96f8fdd5aac60fb263aa92f6512eaded5962b052bd9e90f22a9dec5aaf0d7ff4bfe97646c9530e8444e8435c2d80b24d0bdf938b5d47f6f5b83
@@ -20398,6 +20567,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uglify-js@npm:^3.1.4":
+  version: 3.17.4
+  resolution: "uglify-js@npm:3.17.4"
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 4c0b800e0ff192079d2c3ce8414fd3b656a570028c7c79af5c29c53d5c532b68bbcae4ad47307f89c2ee124d11826fff7a136b59d5c5bb18422bcdf5568afe1e
+  languageName: node
+  linkType: hard
+
 "ulid@npm:2.3.0":
   version: 2.3.0
   resolution: "ulid@npm:2.3.0"
@@ -21435,6 +21613,13 @@ __metadata:
     assert-never: "npm:^1.2.1"
     babel-walk: "npm:3.0.0-canary-5"
   checksum: 06ad978f9ac11268186060af7e19ff33bcfe1631ecbce4c676cb43168e3d6e62a5c6e697bd6dda8570c93b117a9b12980061ff66c3428a4e5cdcf0637e8ed81f
+  languageName: node
+  linkType: hard
+
+"wordwrap@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "wordwrap@npm:1.0.0"
+  checksum: 497d40beb2bdb08e6d38754faa17ce20b0bf1306327f80cb777927edb23f461ee1f6bc659b3c3c93f26b08e1cf4b46acc5bae8fda1f0be3b5ab9a1a0211034cd
   languageName: node
   linkType: hard
 

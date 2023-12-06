@@ -19,6 +19,8 @@ import signupPending from "./private/signup-pending.js";
 import verifyEmail from "./private/verify-email.js";
 import discord from "./service/discord.js";
 import github from "./service/github.js";
+import { WebAPI } from "./web/index.js";
+import mount from "koa-mount";
 
 // Init app
 const app = new Koa();
@@ -137,6 +139,9 @@ router.post("/miauth/:session/check", async (ctx) => {
 errorRouter.all("(.*)", async (ctx) => {
 	ctx.status = 404;
 });
+
+// Register Web API
+await new WebAPI('/iceshrimp').setup(app);
 
 // Register router
 app.use(mastoRouter.routes());
