@@ -28,6 +28,7 @@ import apiServer from "./api/index.js";
 import fileServer from "./file/index.js";
 import proxyServer from "./proxy/index.js";
 import webServer from "./web/index.js";
+import webRewriteServer from "./web-rewrite/index.js";
 import { initializeStreamingServer } from "./api/streaming.js";
 import removeTrailingSlash from "koa-remove-trailing-slashes";
 import { koaBody } from "koa-body";
@@ -142,6 +143,7 @@ setupEndpointsAuthRoot(mastoRouter);
 app.use(router.routes());
 app.use(mastoRouter.routes());
 
+app.use(mount('/rewrite', webRewriteServer));
 app.use(mount(webServer));
 
 function createServer() {

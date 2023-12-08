@@ -7,6 +7,7 @@ import { UserController } from "@/server/api/web/controllers/user.js";
 import { RatelimitMiddleware } from "@/server/api/web/middleware/rate-limit.js";
 import { AuthenticationMiddleware } from "@/server/api/web/middleware/auth.js";
 import { ErrorHandlingMiddleware } from "@/server/api/web/middleware/error-handling.js";
+import { AuthController } from "@/server/api/web/controllers/auth.js";
 
 export type WebRouter = Router<WebState, WebContext>;
 export type WebMiddleware = Middleware<WebState, WebContext>;
@@ -33,6 +34,7 @@ export class WebAPI {
 			errorHandler: ErrorHandlingMiddleware,
 			controllers: [
 				UserController,
+				AuthController,
 			],
 			flow: [
 				AuthenticationMiddleware,
