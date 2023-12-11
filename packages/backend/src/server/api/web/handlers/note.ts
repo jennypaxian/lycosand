@@ -1,7 +1,7 @@
 import { ILocalUser } from "@/models/entities/user.js";
 import { NoteResponse } from "@/server/api/web/entities/note.js";
 import { Notes } from "@/models/index.js";
-import { Boom, notFound, internal } from "@hapi/boom";
+import { Boom, internal } from "@hapi/boom";
 import { Note } from "@/models/entities/note.js";
 import { UserHandler } from "@/server/api/web/handlers/user.js";
 import isQuote from "@/misc/is-quote.js";

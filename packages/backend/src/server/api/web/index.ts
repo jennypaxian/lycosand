@@ -8,6 +8,7 @@ import { ErrorHandlingMiddleware } from "@/server/api/web/middleware/error-handl
 import { AuthController } from "@/server/api/web/controllers/auth.js";
 import { NoteController } from "@/server/api/web/controllers/note.js";
 import { WebContext, WebRouter } from "@/server/api/web/misc/koa.js";
+import { TimelineController } from "@/server/api/web/controllers/timeline.js";
 
 export class WebAPI {
 	private readonly router: WebRouter;
@@ -26,6 +27,7 @@ export class WebAPI {
 				UserController,
 				NoteController,
 				AuthController,
+				TimelineController,
 			],
 			flow: [
 				AuthenticationMiddleware,

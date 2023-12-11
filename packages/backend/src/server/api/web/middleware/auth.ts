@@ -3,6 +3,7 @@ import { Next } from "koa";
 import { Sessions } from "@/models/index.js";
 import { Session } from "@/models/entities/session.js";
 import { ILocalUser } from "@/models/entities/user.js";
+import { unauthorized } from "@hapi/boom";
 
 export const AuthenticationMiddleware: WebMiddleware = async (ctx: WebContext, next: Next) => {
 	const session = await authenticate(ctx.headers.authorization);
@@ -12,13 +13,11 @@ export const AuthenticationMiddleware: WebMiddleware = async (ctx: WebContext, n
 	await next();
 }
 
-export function AuthorizationMiddleware(required: boolean, scopes: string[] = []): WebMiddleware {
+export function AuthorizationMiddleware(admin: boolean = false): WebMiddleware {
 	return async (ctx: WebContext, next: Next) => {
-		try {
-			if (required && !ctx.state.session?.active) {
-				throw new Error(); //FIXME
-			}
-		} catch {}
+		if (!ctx.state.session?.active || (admin && !ctx.state.session?.user.isAdmin)) {
+			throw unauthorized("This method requires an authenticated user");
+		}
 
 		await next();
 	}
