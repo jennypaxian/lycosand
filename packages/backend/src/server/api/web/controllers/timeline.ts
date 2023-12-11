@@ -12,9 +12,11 @@ export class TimelineController {
 	@Flow([AuthorizationMiddleware()])
 	async getHomeTimeline(
 		@CurrentUser() me: ILocalUser,
-		@Query('limit') limit: number = 20,
 		@Query('replies') replies: boolean = true,
+		@Query('limit') limit: number = 20,
+		@Query('max_id') maxId?: string,
+		@Query('min_id') minId?: string,
 	): Promise<TimelineResponse> {
-		return TimelineHandler.getHomeTimeline(me, limit, replies);
+		return TimelineHandler.getHomeTimeline(me, replies, limit, maxId, minId);
 	}
 }

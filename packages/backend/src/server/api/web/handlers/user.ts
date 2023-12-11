@@ -10,11 +10,15 @@ import { notFound } from "@hapi/boom";
 import { NoteHandler } from "@/server/api/web/handlers/note.js";
 
 export class UserHandler {
-	public static async getUserNotes(me: ILocalUser | null, id: string, limit: number, replies: boolean): Promise<TimelineResponse> {
+	public static async getUserNotes(id: string, replies: boolean, me: ILocalUser | null, limit: number, maxId: string | undefined, minId: string | undefined): Promise<TimelineResponse> {
 		const user = await Users.findOneBy({ id });
 		if (!user) throw notFound('No such user');
 
-		const query = makePaginationQuery(Notes.createQueryBuilder('note'))
+		const query = makePaginationQuery(
+			Notes.createQueryBuilder('note'),
+			minId,
+			maxId
+		)
 			.andWhere("note.userId = :userId", { userId: id })
 			.innerJoinAndSelect("note.user", "user")
 			.leftJoinAndSelect("note.reply", "reply")

@@ -19,9 +19,11 @@ export class UserController {
 	async getUserNotes(
 		@CurrentUser() me: ILocalUser | null,
 		@Params('id') id: string,
-		@Query('limit') limit: number = 20,
 		@Query('replies') replies: boolean = false,
+		@Query('limit') limit: number = 20,
+		@Query('max_id') maxId?: string,
+		@Query('min_id') minId?: string,
 	): Promise<TimelineResponse> {
-		return UserHandler.getUserNotes(me, id, limit, replies);
+		return UserHandler.getUserNotes(id, replies, me, limit, maxId, minId);
 	}
 }

@@ -15,8 +15,12 @@ import { generateRepliesQuery } from "@/server/api/common/generate-replies-query
 import { generateMutedUserRenotesQueryForNotes } from "@/server/api/common/generated-muted-renote-query.js";
 
 export class TimelineHandler {
-	public static async getHomeTimeline(me: ILocalUser, limit: number, replies: boolean): Promise<TimelineResponse> {
-		const query = makePaginationQuery(Notes.createQueryBuilder('note'))
+	public static async getHomeTimeline(me: ILocalUser, replies: boolean, limit: number, maxId: string | undefined, minId: string | undefined): Promise<TimelineResponse> {
+		const query = makePaginationQuery(
+			Notes.createQueryBuilder('note'),
+			minId,
+			maxId
+		)
 			.innerJoinAndSelect("note.user", "user")
 			.leftJoinAndSelect("note.reply", "reply")
 			.leftJoinAndSelect("note.renote", "renote")
