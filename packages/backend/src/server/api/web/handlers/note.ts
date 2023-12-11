@@ -24,7 +24,8 @@ export class NoteHandler {
 			id: note.id,
 			text: note.text,
 			user: note.user ? await UserHandler.encode(note.user, me) : await UserHandler.getUser(me, note.userId),
-			renote: note.renoteId && recurse > 0 ? await this.encode(note.renote ?? await this.getNoteOrFail(note.renoteId), me, isQuote(note) ? --recurse : 0) : undefined,
+			renote: !isQuote(note) && note.renoteId && recurse > 0 ? await this.encode(note.renote ?? await this.getNoteOrFail(note.renoteId), me, 0) : undefined,
+			quote: isQuote(note) && note.renoteId && recurse > 0 ? await this.encode(note.renote ?? await this.getNoteOrFail(note.renoteId), me, --recurse) : undefined,
 			reply: note.replyId && recurse > 0 ? await this.encode(note.renote ?? await this.getNoteOrFail(note.replyId), me, 0) : undefined,
 		};
 	}

@@ -70,6 +70,7 @@ import { OAuthToken } from "@/models/entities/oauth-token.js";
 import { UserProfileRepository } from "@/models/repositories/user-profile.js";
 import { HtmlNoteCacheEntry } from "@/models/entities/html-note-cache-entry.js";
 import { HtmlUserCacheEntry } from "@/models/entities/html-user-cache-entry.js";
+import { Session } from "@/models/entities/session.js";
 
 export const Announcements = db.getRepository(Announcement);
 export const AnnouncementReads = db.getRepository(AnnouncementRead);
@@ -138,3 +139,4 @@ export const OAuthApps = db.getRepository(OAuthApp);
 export const OAuthTokens = db.getRepository(OAuthToken);
 export const HtmlUserCacheEntries = db.getRepository(HtmlUserCacheEntry);
 export const HtmlNoteCacheEntries = db.getRepository(HtmlNoteCacheEntry);
+export const Sessions = db.getRepository(Session);

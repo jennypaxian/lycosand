@@ -35,7 +35,7 @@ export class UserHandler {
 		const result = query.take(Math.min(limit, 100)).getMany();
 		return {
 			notes: await NoteHandler.encodeMany(await result, me),
-			pagination: {},
+			limit: limit
 		}
 	}
 

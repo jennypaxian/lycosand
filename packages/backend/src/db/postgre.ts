@@ -76,6 +76,7 @@ import { OAuthApp } from "@/models/entities/oauth-app.js";
 import { OAuthToken } from "@/models/entities/oauth-token.js";
 import { HtmlNoteCacheEntry } from "@/models/entities/html-note-cache-entry.js";
 import { HtmlUserCacheEntry } from "@/models/entities/html-user-cache-entry.js";
+import { Session } from "@/models/entities/session.js";
 
 const sqlLogger = dbLogger.createSubLogger("sql", "gray", false);
 class MyCustomLogger implements Logger {
@@ -179,6 +180,7 @@ export const entities = [
 	OAuthToken,
 	HtmlNoteCacheEntry,
 	HtmlUserCacheEntry,
+	Session,
 	...charts,
 ];
 

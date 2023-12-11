@@ -6,10 +6,11 @@ export type NoteResponse = {
     text: string | null;
     user: UserResponse;
     reply: NoteResponse | undefined | null; // Undefined if no record, null if not visible
-    renote: NoteResponse | undefined | null; // Undefined if no record, null if not visible
+	renote: NoteResponse | undefined | null; // Undefined if no record, null if not visible
+	quote: NoteResponse | undefined | null; // Undefined if no record, null if not visible
 };
 
 export type TimelineResponse = {
     notes: NoteResponse[];
-    pagination: {}; //TODO
+    limit: number;
 };

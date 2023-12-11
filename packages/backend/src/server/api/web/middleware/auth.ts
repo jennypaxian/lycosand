@@ -1,16 +1,13 @@
-import { WebMiddleware, WebContext, WebState } from "@/server/api/web/index.js";
+import { WebContext, WebMiddleware } from "@/server/api/web/misc/koa.js";
 import { Next } from "koa";
-import authenticate from "@/server/api/authenticate.js";
+import { Sessions } from "@/models/index.js";
+import { Session } from "@/models/entities/session.js";
+import { ILocalUser } from "@/models/entities/user.js";
 
 export const AuthenticationMiddleware: WebMiddleware = async (ctx: WebContext, next: Next) => {
-	try {
-		const [ user, token ] = await authenticate(ctx.headers.authorization, null, false);
-
-		//FIXME we shouldn't need to cast this
-		(ctx.state as WebState).user = user ?? null;
-		(ctx.state as WebState).token = token ?? null;
-
-	} catch {}
+	const session = await authenticate(ctx.headers.authorization);
+	ctx.state.user = session?.user as ILocalUser;
+	ctx.state.session = session;
 
 	await next();
 }
@@ -18,11 +15,18 @@ export const AuthenticationMiddleware: WebMiddleware = async (ctx: WebContext, n
 export function AuthorizationMiddleware(required: boolean, scopes: string[] = []): WebMiddleware {
 	return async (ctx: WebContext, next: Next) => {
 		try {
-			if (required && !(ctx.state as WebState).user) {
+			if (required && !ctx.state.session?.active) {
 				throw new Error(); //FIXME
 			}
 		} catch {}
 
 		await next();
 	}
+}
+
+async function authenticate(token: string | undefined): Promise<Session | null> {
+	if (token == null || token.length < 1) return null;
+	if (token.toLowerCase().startsWith('bearer ')) token = token.substring(7);
+
+	return Sessions.findOne({ where: { token }, relations: ["user"] });
 }

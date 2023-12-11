@@ -1,24 +1,13 @@
 import Router from "@koa/router";
-import Koa, { DefaultState, Context, Middleware } from "koa";
-import { bootstrapControllers, Ctx } from "@iceshrimp/koa-openapi";
-import { ILocalUser } from "@/models/entities/user.js";
-import { AccessToken } from "@/models/entities/access-token.js";
+import Koa, { DefaultState } from "koa";
+import { bootstrapControllers } from "@iceshrimp/koa-openapi";
 import { UserController } from "@/server/api/web/controllers/user.js";
 import { RatelimitMiddleware } from "@/server/api/web/middleware/rate-limit.js";
 import { AuthenticationMiddleware } from "@/server/api/web/middleware/auth.js";
 import { ErrorHandlingMiddleware } from "@/server/api/web/middleware/error-handling.js";
 import { AuthController } from "@/server/api/web/controllers/auth.js";
 import { NoteController } from "@/server/api/web/controllers/note.js";
-
-export type WebRouter = Router<WebState, WebContext>;
-export type WebMiddleware = Middleware<WebState, WebContext>;
-
-export interface WebState extends DefaultState {}
-
-export interface WebContext extends Context {
-	user: ILocalUser | null;
-	token: AccessToken | null;
-}
+import { WebContext, WebRouter } from "@/server/api/web/misc/koa.js";
 
 export class WebAPI {
 	private readonly router: WebRouter;
