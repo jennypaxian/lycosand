@@ -5,8 +5,8 @@ import AccountPicker from "../components/AccountPicker.vue";
 </script>
 
 <template>
-	<AccountPicker/>
-	<AuthDebug/>
+	<AccountPicker />
+	<AuthDebug />
 </template>
 
 <style scoped lang="scss">

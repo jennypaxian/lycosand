@@ -20,9 +20,13 @@ async function submit() {
 
 <template>
 	<select ref="aref">
-		<option v-for="item in test">{{ item }}</option>
+		<option v-for="item in test" :key="item">
+			{{ item }}
+		</option>
 	</select>
-	<button @click="submit">Submit</button>
+	<button @click="submit">
+		Submit
+	</button>
 </template>
 
 <style scoped lang="scss">

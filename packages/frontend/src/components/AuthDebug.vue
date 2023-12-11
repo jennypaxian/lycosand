@@ -12,9 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<pre class="auth" ref="field">
-
-	</pre>
+	<pre ref="field" class="auth" />
 </template>
 
 <style scoped lang="scss">

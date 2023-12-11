@@ -1,4 +1,13 @@
 import { Note } from "@/models/entities/note.js";
 
-export type NoteResponse = {} & Note;
-export type TimelineResponse = NoteResponse[];
+namespace WebEntities {
+    export type NoteResponse = {
+        id: Note["id"];
+
+    };
+
+    export type TimelineResponse = {
+        notes: NoteResponse[],
+
+    };
+}
