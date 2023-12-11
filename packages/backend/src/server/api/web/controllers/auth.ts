@@ -21,8 +21,7 @@ export class AuthController {
 	): Promise<AuthResponse> {
 		const user = me ? await UserHandler.getUser(me, me.id) : null;
 		return {
-			authenticated: !!session?.active,
-			status: user && session?.active ? null : '2fa',
+			status: !user ? 'guest' : session?.active ? 'authenticated' : '2fa',
 			token: session?.token ?? null,
 			user: user,
 		};
