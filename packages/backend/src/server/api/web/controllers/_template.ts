@@ -9,6 +9,6 @@ export class NoteController {
         @CurrentUser() me: ILocalUser | null,
         @Params('id') id: string,
     ) {
-        NoteHandler.getNote(me, id);
+        NoteHandler.getNoteOrFail(me, id);
     }
 }

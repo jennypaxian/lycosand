@@ -1,5 +1,5 @@
 import { Controller, CurrentUser, Get, Params, Query } from "@iceshrimp/koa-openapi";
-import { UserDetailedResponse, UserResponse } from "@/server/api/web/entities/user.js";
+import { UserResponse } from "@/server/api/web/entities/user.js";
 import { TimelineResponse } from "@/server/api/web/entities/note.js";
 import type { ILocalUser } from "@/models/entities/user.js";
 import { UserHandler } from "@/server/api/web/handlers/user.js";
@@ -11,10 +11,8 @@ export class UserController {
 		@CurrentUser() me: ILocalUser | null,
 		@Params('id') id: string,
 		@Query('detail') detail: boolean
-	): Promise<UserResponse | UserDetailedResponse> {
-		return detail
-			? UserHandler.getUser(me, id)
-			: UserHandler.getUserDetailed(me, id);
+	): Promise<UserResponse> {
+		return UserHandler.getUser(me, id);
 	}
 
 	@Get('/:id/notes')
