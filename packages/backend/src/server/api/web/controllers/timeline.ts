@@ -1,4 +1,4 @@
-import { Controller, CurrentUser, Flow, Get, Params, Query } from "@iceshrimp/koa-openapi";
+import { Controller, CurrentUser, Description, Flow, Get, Params, Query } from "@iceshrimp/koa-openapi";
 import { UserResponse } from "@/server/api/web/entities/user.js";
 import { TimelineResponse } from "@/server/api/web/entities/note.js";
 import type { ILocalUser } from "@/models/entities/user.js";
@@ -10,6 +10,7 @@ import { AuthorizationMiddleware } from "@/server/api/web/middleware/auth.js";
 export class TimelineController {
 	@Get('/home')
 	@Flow([AuthorizationMiddleware()])
+	@Description("Get the home timeline")
 	async getHomeTimeline(
 		@CurrentUser() me: ILocalUser,
 		@Query('replies') replies: boolean = true,
