@@ -9,6 +9,8 @@ import { AuthController } from "@/server/api/web/controllers/auth.js";
 import { NoteController } from "@/server/api/web/controllers/note.js";
 import { WebContext, WebRouter } from "@/server/api/web/misc/koa.js";
 import { TimelineController } from "@/server/api/web/controllers/timeline.js";
+import { genSchema } from "@/server/api/web/misc/schema.js";
+import { OpenAPIV3_1 } from "openapi-types";
 
 export class WebAPI {
 	private readonly router: WebRouter;
@@ -18,7 +20,7 @@ export class WebAPI {
 	}
 
 	public async setup(app: Koa): Promise<void> {
-        await bootstrapControllers({
+		await bootstrapControllers({
 			app: app,
 			router: this.router,
 			attachRoutes: true,
@@ -43,13 +45,32 @@ export class WebAPI {
 				enabled: true,
 				publicURL: '/api/iceshrimp',
 				options: {
-					title: "Iceshrimp Web API documentation"
+					title: "Iceshrimp Web API documentation",
+					swaggerOptions: {
+						urls: [{ url: "/api/iceshrimp/openapi.json", name: "/api/iceshrimp/openapi.json" }],
+						defaultModelsExpandDepth: "2",
+						defaultModelExpandDepth: "2",
+						persistAuthorization: "true",
+						docExpansion: "none",
+					},
+					favicon: '/favicon.ico'
 				},
 				spec: {
 					info: {
 						title: "Iceshrimp Web API",
 						description: "Documentation for using Iceshrimp's Web API",
 						version: "1.0.0"
+					},
+				},
+				schemas: genSchema().definitions as Record<string, OpenAPIV3_1.SchemaObject>,
+				securitySchemes: {
+					"user": {
+						type: 'http',
+						scheme: 'bearer'
+					},
+					"admin": {
+						type: 'http',
+						scheme: 'bearer'
 					}
 				}
 			},

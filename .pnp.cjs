@@ -1898,10 +1898,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@iceshrimp/koa-openapi", [\
-      ["npm:2.7.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.7.0%2Fkoa-openapi-2.7.0.tgz", {\
-        "packageLocation": "./.yarn/cache/@iceshrimp-koa-openapi-npm-2.7.0-37778d7452-21685db4ea.zip/node_modules/@iceshrimp/koa-openapi/",\
+      ["npm:3.2.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F3.2.0%2Fkoa-openapi-3.2.0.tgz", {\
+        "packageLocation": "./.yarn/cache/@iceshrimp-koa-openapi-npm-3.2.0-d2c290057b-5ec6ea58be.zip/node_modules/@iceshrimp/koa-openapi/",\
         "packageDependencies": [\
-          ["@iceshrimp/koa-openapi", "npm:2.7.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.7.0%2Fkoa-openapi-2.7.0.tgz"],\
+          ["@iceshrimp/koa-openapi", "npm:3.2.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F3.2.0%2Fkoa-openapi-3.2.0.tgz"],\
           ["@hapi/boom", "npm:10.0.1"],\
           ["@koa/cors", "npm:4.0.0"],\
           ["@koa/router", "npm:12.0.1"],\
@@ -1911,10 +1911,26 @@ const RAW_RUNTIME_STATE =
           ["koa", "npm:2.14.2"],\
           ["koa-body", "npm:6.0.1"],\
           ["koa-helmet", "npm:7.0.2"],\
-          ["koa2-swagger-ui", "virtual:37778d7452aa22a4b9b696d3401d761eb63cf07fe0900455c93a17ab008fd0bea8cb487e82bff1386539d52523936a6d87cd46d4e8395c6f97dee7afea734531#npm:5.10.0"],\
+          ["koa2-swagger-ui", "virtual:d2c290057b75f80fd76a22ec676ab3d63a5dabf80ff85b75aaf6bde56eebfb4dfa277221c743544b6d668bc070c759965f7368b428fc6cbd6ad12069d18f1396#npm:5.10.0"],\
           ["lodash", "npm:4.17.21"],\
           ["openapi-types", "npm:12.1.3"],\
           ["reflect-metadata", "npm:0.1.13"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@iceshrimp/ts-json-schema-generator", [\
+      ["npm:1.0.1::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fts-json-schema-generator%2F-%2F1.0.1%2Fts-json-schema-generator-1.0.1.tgz", {\
+        "packageLocation": "./.yarn/cache/@iceshrimp-ts-json-schema-generator-npm-1.0.1-fe26c7afc1-dbac3ba178.zip/node_modules/@iceshrimp/ts-json-schema-generator/",\
+        "packageDependencies": [\
+          ["@iceshrimp/ts-json-schema-generator", "npm:1.0.1::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fts-json-schema-generator%2F-%2F1.0.1%2Fts-json-schema-generator-1.0.1.tgz"],\
+          ["@types/json-schema", "npm:7.0.15"],\
+          ["commander", "npm:11.1.0"],\
+          ["glob", "npm:8.1.0"],\
+          ["json5", "npm:2.2.3"],\
+          ["normalize-path", "npm:3.0.0"],\
+          ["safe-stable-stringify", "npm:2.4.3"],\
+          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4145,6 +4161,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.12-f05cfc0e99-7a72ba9cb7.zip/node_modules/@types/json-schema/",\
         "packageDependencies": [\
           ["@types/json-schema", "npm:7.0.12"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.0.15", {\
+        "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.15-fd16381786-1a3c3e0623.zip/node_modules/@types/json-schema/",\
+        "packageDependencies": [\
+          ["@types/json-schema", "npm:7.0.15"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7217,7 +7240,8 @@ const RAW_RUNTIME_STATE =
           ["@bull-board/ui", "npm:5.6.0"],\
           ["@discordapp/twemoji", "npm:14.1.2"],\
           ["@hapi/boom", "npm:10.0.1"],\
-          ["@iceshrimp/koa-openapi", "npm:2.7.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.7.0%2Fkoa-openapi-2.7.0.tgz"],\
+          ["@iceshrimp/koa-openapi", "npm:3.2.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F3.2.0%2Fkoa-openapi-3.2.0.tgz"],\
+          ["@iceshrimp/ts-json-schema-generator", "npm:1.0.1::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fts-json-schema-generator%2F-%2F1.0.1%2Fts-json-schema-generator-1.0.1.tgz"],\
           ["@koa/cors", "npm:3.4.3"],\
           ["@koa/multer", "virtual:aa59773ac87791c4813d53447077fcf8a847d6de5a301d34dc31286584b1dbb26d30d3adb5b4c41c1e8aea04371e926fda05c09c6253647c432e11d872a304ba#npm:3.0.2"],\
           ["@koa/router", "npm:9.0.1"],\
@@ -7238,6 +7262,7 @@ const RAW_RUNTIME_STATE =
           ["@types/formidable", "npm:2.0.6"],\
           ["@types/js-yaml", "npm:4.0.5"],\
           ["@types/jsdom", "npm:21.1.1"],\
+          ["@types/json-schema", "npm:7.0.15"],\
           ["@types/jsonld", "npm:1.5.9"],\
           ["@types/jsrsasign", "npm:10.5.8"],\
           ["@types/koa", "npm:2.13.7"],\
@@ -7344,6 +7369,7 @@ const RAW_RUNTIME_STATE =
           ["node-fetch", "npm:3.3.1"],\
           ["nodemailer", "npm:6.9.3"],\
           ["oauth", "npm:0.10.0"],\
+          ["openapi-types", "npm:12.1.3"],\
           ["os-utils", "npm:0.0.14"],\
           ["otpauth", "npm:9.1.4"],\
           ["parse-duration", "npm:1.1.0"],\
@@ -9064,6 +9090,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/commander-npm-10.0.1-f17613b72b-8799faa84a.zip/node_modules/commander/",\
         "packageDependencies": [\
           ["commander", "npm:10.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:11.1.0", {\
+        "packageLocation": "./.yarn/cache/commander-npm-11.1.0-56e979613c-66bd2d8a05.zip/node_modules/commander/",\
+        "packageDependencies": [\
+          ["commander", "npm:11.1.0"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -17145,10 +17178,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:37778d7452aa22a4b9b696d3401d761eb63cf07fe0900455c93a17ab008fd0bea8cb487e82bff1386539d52523936a6d87cd46d4e8395c6f97dee7afea734531#npm:5.10.0", {\
-        "packageLocation": "./.yarn/__virtual__/koa2-swagger-ui-virtual-c4b42f8a3a/0/cache/koa2-swagger-ui-npm-5.10.0-54bce94261-40575d377d.zip/node_modules/koa2-swagger-ui/",\
+      ["virtual:d2c290057b75f80fd76a22ec676ab3d63a5dabf80ff85b75aaf6bde56eebfb4dfa277221c743544b6d668bc070c759965f7368b428fc6cbd6ad12069d18f1396#npm:5.10.0", {\
+        "packageLocation": "./.yarn/__virtual__/koa2-swagger-ui-virtual-285d8b91f4/0/cache/koa2-swagger-ui-npm-5.10.0-54bce94261-40575d377d.zip/node_modules/koa2-swagger-ui/",\
         "packageDependencies": [\
-          ["koa2-swagger-ui", "virtual:37778d7452aa22a4b9b696d3401d761eb63cf07fe0900455c93a17ab008fd0bea8cb487e82bff1386539d52523936a6d87cd46d4e8395c6f97dee7afea734531#npm:5.10.0"],\
+          ["koa2-swagger-ui", "virtual:d2c290057b75f80fd76a22ec676ab3d63a5dabf80ff85b75aaf6bde56eebfb4dfa277221c743544b6d668bc070c759965f7368b428fc6cbd6ad12069d18f1396#npm:5.10.0"],\
           ["@types/koa", null],\
           ["handlebars", "npm:4.7.8"],\
           ["lodash", "npm:4.17.21"],\
@@ -22149,6 +22182,15 @@ const RAW_RUNTIME_STATE =
           ["call-bind", "npm:1.0.2"],\
           ["get-intrinsic", "npm:1.2.1"],\
           ["is-regex", "npm:1.1.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["safe-stable-stringify", [\
+      ["npm:2.4.3", {\
+        "packageLocation": "./.yarn/cache/safe-stable-stringify-npm-2.4.3-d895741b40-a6c192bbef.zip/node_modules/safe-stable-stringify/",\
+        "packageDependencies": [\
+          ["safe-stable-stringify", "npm:2.4.3"]\
         ],\
         "linkType": "HARD"\
       }]\

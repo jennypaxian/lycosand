@@ -1,4 +1,4 @@
-import { Controller, Get, CurrentUser, Params, Description, Returns } from "@iceshrimp/koa-openapi";
+import { Controller, Get, CurrentUser, Params, Description, Returns, Security } from "@iceshrimp/koa-openapi";
 import type { ILocalUser } from "@/models/entities/user.js";
 import { NoteHandler } from "@/server/api/web/handlers/note.js";
 import { NoteResponse } from "@/server/api/web/entities/note.js";
@@ -7,9 +7,10 @@ import { notFound } from "@hapi/boom";
 @Controller('/note')
 export class NoteController {
     @Get('/:id')
+	@Security("user")
 	@Description("Returns the specified note")
-	@Returns(200, "Successful response")
-	@Returns(404, "The specified note either doesn't exist or is not visible for the authenticated user (if any)")
+	@Returns(200, "NoteResponse", "Successful response")
+	@Returns(404, "ErrorResponse", "The specified note either doesn't exist or is not visible for the authenticated user (if any)")
     async getNote(
         @CurrentUser() me: ILocalUser | null,
         @Params('id') id: string,
