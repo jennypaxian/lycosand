@@ -82,6 +82,9 @@
 		},
 		"@iceshrimp/koa-openapi@2.4.0": {
 			"unplugged": true
+		},
+		"@iceshrimp/koa-openapi@2.5.0": {
+			"unplugged": true
 		}
 	}
 }

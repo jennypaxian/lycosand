@@ -1898,10 +1898,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@iceshrimp/koa-openapi", [\
-      ["npm:2.4.1::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.4.1%2Fkoa-openapi-2.4.1.tgz", {\
-        "packageLocation": "./.yarn/cache/@iceshrimp-koa-openapi-npm-2.4.1-8c7362549b-5270b64aa4.zip/node_modules/@iceshrimp/koa-openapi/",\
+      ["npm:2.7.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.7.0%2Fkoa-openapi-2.7.0.tgz", {\
+        "packageLocation": "./.yarn/cache/@iceshrimp-koa-openapi-npm-2.7.0-37778d7452-21685db4ea.zip/node_modules/@iceshrimp/koa-openapi/",\
         "packageDependencies": [\
-          ["@iceshrimp/koa-openapi", "npm:2.4.1::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.4.1%2Fkoa-openapi-2.4.1.tgz"],\
+          ["@iceshrimp/koa-openapi", "npm:2.7.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.7.0%2Fkoa-openapi-2.7.0.tgz"],\
           ["@hapi/boom", "npm:10.0.1"],\
           ["@koa/cors", "npm:4.0.0"],\
           ["@koa/router", "npm:12.0.1"],\
@@ -1911,7 +1911,7 @@ const RAW_RUNTIME_STATE =
           ["koa", "npm:2.14.2"],\
           ["koa-body", "npm:6.0.1"],\
           ["koa-helmet", "npm:7.0.2"],\
-          ["koa2-swagger-ui", "virtual:8c7362549be2320b14415acd0a28c20c4a28a61f50998f521c19c171b924639d2efda4597f82a25044828aebf1f59af528473f27cfbb1764bf584786860b172c#npm:5.10.0"],\
+          ["koa2-swagger-ui", "virtual:37778d7452aa22a4b9b696d3401d761eb63cf07fe0900455c93a17ab008fd0bea8cb487e82bff1386539d52523936a6d87cd46d4e8395c6f97dee7afea734531#npm:5.10.0"],\
           ["lodash", "npm:4.17.21"],\
           ["openapi-types", "npm:12.1.3"],\
           ["reflect-metadata", "npm:0.1.13"]\
@@ -7217,7 +7217,7 @@ const RAW_RUNTIME_STATE =
           ["@bull-board/ui", "npm:5.6.0"],\
           ["@discordapp/twemoji", "npm:14.1.2"],\
           ["@hapi/boom", "npm:10.0.1"],\
-          ["@iceshrimp/koa-openapi", "npm:2.4.1::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.4.1%2Fkoa-openapi-2.4.1.tgz"],\
+          ["@iceshrimp/koa-openapi", "npm:2.7.0::__archiveUrl=https%3A%2F%2Ficeshrimp.dev%2Fapi%2Fpackages%2Ficeshrimp%2Fnpm%2F%2540iceshrimp%252Fkoa-openapi%2F-%2F2.7.0%2Fkoa-openapi-2.7.0.tgz"],\
           ["@koa/cors", "npm:3.4.3"],\
           ["@koa/multer", "virtual:aa59773ac87791c4813d53447077fcf8a847d6de5a301d34dc31286584b1dbb26d30d3adb5b4c41c1e8aea04371e926fda05c09c6253647c432e11d872a304ba#npm:3.0.2"],\
           ["@koa/router", "npm:9.0.1"],\
@@ -17145,10 +17145,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:8c7362549be2320b14415acd0a28c20c4a28a61f50998f521c19c171b924639d2efda4597f82a25044828aebf1f59af528473f27cfbb1764bf584786860b172c#npm:5.10.0", {\
-        "packageLocation": "./.yarn/__virtual__/koa2-swagger-ui-virtual-d32ac78ca4/0/cache/koa2-swagger-ui-npm-5.10.0-54bce94261-40575d377d.zip/node_modules/koa2-swagger-ui/",\
+      ["virtual:37778d7452aa22a4b9b696d3401d761eb63cf07fe0900455c93a17ab008fd0bea8cb487e82bff1386539d52523936a6d87cd46d4e8395c6f97dee7afea734531#npm:5.10.0", {\
+        "packageLocation": "./.yarn/__virtual__/koa2-swagger-ui-virtual-c4b42f8a3a/0/cache/koa2-swagger-ui-npm-5.10.0-54bce94261-40575d377d.zip/node_modules/koa2-swagger-ui/",\
         "packageDependencies": [\
-          ["koa2-swagger-ui", "virtual:8c7362549be2320b14415acd0a28c20c4a28a61f50998f521c19c171b924639d2efda4597f82a25044828aebf1f59af528473f27cfbb1764bf584786860b172c#npm:5.10.0"],\
+          ["koa2-swagger-ui", "virtual:37778d7452aa22a4b9b696d3401d761eb63cf07fe0900455c93a17ab008fd0bea8cb487e82bff1386539d52523936a6d87cd46d4e8395c6f97dee7afea734531#npm:5.10.0"],\
           ["@types/koa", null],\
           ["handlebars", "npm:4.7.8"],\
           ["lodash", "npm:4.17.21"],\
