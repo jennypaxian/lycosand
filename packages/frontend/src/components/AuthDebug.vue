@@ -5,7 +5,7 @@ import { onMounted, ref } from "vue";
 const field = ref<HTMLElement>();
 
 onMounted(() => {
-	api('/api/iceshrimp/v1/auth').then(res => {
+	api('/v1/auth').then(res => {
 		field.value!.textContent = JSON.stringify(res, null, 2);
 	});
 });
