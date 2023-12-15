@@ -7,8 +7,9 @@
 	},
 	"private": true,
 	"scripts": {
-		"rebuild": "clean && node ./scripts/build-greet.js && yarn workspace iceshrimp-js build &&  yarn workspaces foreach -Apitv run build && gulp",
+		"rebuild": "clean && node ./scripts/build-greet.js && yarn workspace iceshrimp-js build && yarn workspaces foreach -Apitv run build && gulp",
 		"build": "node ./scripts/build-greet.js && yarn workspace iceshrimp-js run build && yarn workspaces foreach -Apitv run build && gulp",
+		"build:rewrite": "node ./scripts/build-greet.js && yarn workspaces foreach -Apitv --exclude client --exclude iceshrimp run build && gulp",
 		"build:debug": "node ./scripts/build-greet.js && yarn workspace iceshrimp-js run build:debug && yarn workspaces foreach -Apitv run build:debug && gulp",
 		"start": "yarn workspace backend run start",
 		"start:debug": "yarn workspace backend run start:debug",
