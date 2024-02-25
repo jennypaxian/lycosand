@@ -13,7 +13,8 @@ If you want to use prebuilt images:
 
 ```sh
 GIT_LFS_SKIP_SMUDGE=1 git clone https://iceshrimp.dev/iceshrimp/iceshrimp.git --depth=1
-cp "iceshrimp/docs/examples/Podman (quadlet)" $HOME/.config/containers/systemd
+mkdir -p $HOME/.config/containers/systemd
+cp "iceshrimp/docs/examples/Podman (quadlet)"/* $HOME/.config/containers/systemd
 ```
 
 Tweak quadlet files and change the image tag in `$HOME/.config/containers/systemd/iceshrimp-web.container` from `latest` to `dev` or `pre` if desired, and run `docs/examples/Podman\ \(quadlet\)/volume-dir-creation.sh`.
@@ -23,7 +24,8 @@ If you want to build your own images:
 ```sh
 git lfs install
 git clone https://iceshrimp.dev/iceshrimp/iceshrimp.git
-cp "iceshrimp/docs/examples/Podman (quadlet)" $HOME/.config/containers/systemd
+mkdir -p $HOME/.config/containers/systemd
+cp "iceshrimp/docs/examples/Podman (quadlet)"/* $HOME/.config/containers/systemd
 
 ```
 
@@ -45,6 +47,7 @@ Choose a method, whether you chose to build the image yourself or not.
 
 ```sh
 podman pull $(grep -F "Image=" $HOME/.config/containers/systemd/iceshrimp-web.container | cut -d= -f2)
+systemctl --user daemon-reload
 systemctl --user start iceshrimp-web.service
 ```
 
@@ -54,6 +57,7 @@ Enter Iceshrimp repo and run:
 
 ```sh
 podman build . -t $(grep -F "Image=" $HOME/.config/containers/systemd/iceshrimp-web.container | cut -d= -f2) --ulimit nofile=16384:16384
+systemctl --user daemon-reload
 systemctl --user start iceshrimp-web.service
 ```
 
