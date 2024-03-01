@@ -87,6 +87,7 @@ export class MiscHelpers {
                 },
                 reactions: {
                     max_reactions: 1,
+                    default_reaction: meta.defaultReaction,
                 },
             },
             contact_account: contact,
