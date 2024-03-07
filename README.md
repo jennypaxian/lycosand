@@ -43,7 +43,7 @@ It was forked from <del>Calckey</del> Firefish (itself a fork of Misskey) in mid
 	- Please note that we do not operate a "flagship instance", the only project-affiliated domain is `iceshrimp.dev`.
 - Want to donate to the project?
   - Our backend lead dev (zotan) is in need of a better laptop, as their current one does not have enough memory. You can contribute [here](https://bunq.me/zotanlaptopcrowdfund). Any leftover money will be given to queers in need.
-- Need help or want to contribute? Join the [matrix room](https://matrix.to/#/%23iceshrimp-dev:161.rocks)!
+- Need help or want to contribute? Join the [chat room](https://chat.iceshrimp.dev)!
 
 ---
 
