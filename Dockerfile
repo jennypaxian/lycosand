@@ -35,7 +35,7 @@ FROM alpine:3.18
 WORKDIR /iceshrimp
 
 # Install runtime dependencies
-RUN apk add --no-cache --no-progress tini ffmpeg vips-dev zip unzip nodejs-current
+RUN apk add --no-cache --no-progress tini ffmpeg vips-dev zip unzip nodejs-current libheif-dev
 
 # Copy built files
 COPY --from=build /iceshrimp /iceshrimp
