@@ -13,7 +13,7 @@ This document will guide you through manual installation of Iceshrimp. We also p
 ### Required
 
 - [**Node.js**](https://nodejs.org) v18.16.0+ (v20 recommended)
-- [**PostgreSQL**](https://www.postgresql.org/) 12+ 
+- [**PostgreSQL**](https://www.postgresql.org/) 12+ (including modules, usually packaged as postgresql-contrib)
 - [**Redis**](https://redis.io/) 6+
 - [**libvips**](https://www.libvips.org/)
 - **Web proxy**
