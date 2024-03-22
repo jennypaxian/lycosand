@@ -98,6 +98,10 @@ export default defineComponent({
 		> .note {
 			margin: 16px 0 16px auto;
 
+			> .reactions-list {
+				justify-content: end;
+			}
+
 			> .content {
 				padding: 16px;
 				margin: 0 0 0 auto;
