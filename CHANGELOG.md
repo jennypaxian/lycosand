@@ -1,3 +1,33 @@
+## v2023.12.6
+This is a security release. Upgrading is therefore strongly recommended.
+
+### Backend
+- When fetching activities, their identifiers are now validated much more strictly
+- Drive files now have the `X-Content-Type-Options` header set to `nosniff`
+- The queue dashboard path is now validated more strictly
+- The AP object resolver logic was improved to better handle edge cases
+- Poll notifications are no longer generated for muted notes
+
+### Frontend
+- Remote (cross-origin) videos now plays properly
+- Emoji reactions on the landing page timeline preview are now aligned properly
+
+### Mastodon client API
+- The default reaction is now returned with /v1/instance
+
+### Miscellaneous
+- The podman documentation was improved
+- The example nginx config now has gzip enabled
+- The Dockerfile now references the required dependencies for decoding AVIF images
+- The installation requirements now mention postgresql-contrib
+- Various translation updates
+
+### Attribution
+### Attribution
+This release was made possible by project contributors: CookiLover311, Crimekillz, Jegler, Laura Hausmann, Lilian, Norm, Salif Mehmed, jeder, konkonkon, naskya & 老周部落
+
+Furthermore, I want to give special thanks to Oneric for the extraordinarily detailed security disclosure.
+
 ## v2023.12.5
 This is a followup security release. Upgrading is recommended.
 
