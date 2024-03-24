@@ -122,28 +122,42 @@ export default class Resolver {
 		apLogger.debug("Getting object from remote, authenticated as user:");
 		apLogger.debug(JSON.stringify(this.user, null, 2));
 
-		const res = (
+		const {res, object} = await this.doFetch(value);
+
+		if (object.id == null) return object;
+		if (res.finalUrl === object.id) return object;
+
+		if (new URL(res.finalUrl).host !== new URL(object.id).host)
+			throw new Error("Object ID host doesn't match final url host");
+
+		const {res: finalRes, object: finalObject} = await this.doFetch(object.id);
+
+		if (finalRes.finalUrl !== finalObject.id)
+			throw new Error("Object ID still doesn't match final URL after second fetch attempt")
+
+		return finalObject;
+	}
+
+	private async doFetch(uri: string) {
+		let res = (
 			this.user
-				? await signedGet(value, this.user)
-				: await getJsonActivity(value)
+				? await signedGet(uri, this.user)
+				: await getJsonActivity(uri)
 		);
-		const object = res.content as IObject;
+		let object = res.content as IObject;
 
 		if (
 			object == null ||
 			(Array.isArray(object["@context"])
 				? !(object["@context"] as unknown[]).includes(
-						"https://www.w3.org/ns/activitystreams",
-				  )
+					"https://www.w3.org/ns/activitystreams",
+				)
 				: object["@context"] !== "https://www.w3.org/ns/activitystreams")
 		) {
 			throw new Error("invalid response");
 		}
 
-		if (object.id != null && new URL(res.finalUrl).host != new URL(object.id).host)
-			throw new Error("Object ID host doesn't match final url host");
-
-		return object;
+		return {res, object};
 	}
 
 	private resolveLocal(url: string): Promise<IObject> {
