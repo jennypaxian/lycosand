@@ -28,6 +28,7 @@ export async function endedPollNotification(
 
 	for (const userId of userIds) {
 		createNotification(userId, "pollEnded", {
+			note: note,
 			noteId: note.id,
 		});
 	}
