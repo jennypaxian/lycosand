@@ -124,7 +124,7 @@ export default class Resolver {
 
 		const {res, object} = await this.doFetch(value);
 
-		if (object.id == null) return object;
+		if (object.id == null) throw new Error("Object has no ID");
 		if (res.finalUrl === object.id) return object;
 
 		if (new URL(res.finalUrl).host !== new URL(object.id).host)
