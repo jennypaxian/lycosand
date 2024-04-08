@@ -4,6 +4,7 @@ import { db } from "@/db/postgre.js";
 import define from "../../define.js";
 import { Metas } from "@/models/index.js";
 import { Users } from "@/models/index.js";
+import { IsNull } from "typeorm";
 
 
 export const meta = {
@@ -537,10 +538,18 @@ export default define(meta, paramDef, async (ps, me) => {
 	}
 
 	if (ps.autofollowedAccount !== undefined) {
-		// Verify account exists and is a local account
-		const user = await Users.findOneBy({ username: ps.autofollowedAccount, host: null });
-		if (user) {
-			set.autofollowedAccount = user.username;
+		if (ps.autofollowedAccount === null) {
+			set.autofollowedAccount = null;
+		}
+		else {
+			// Verify account exists and is a local account
+			const user = await Users.findOneBy({ username: ps.autofollowedAccount, host: IsNull() });
+			if (user !== null) {
+				set.autofollowedAccount = user.username;
+			}
+			else {
+				set.autofollowedAccount = null;
+			}
 		}
 	}
 
