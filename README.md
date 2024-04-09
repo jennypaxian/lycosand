@@ -1,20 +1,10 @@
 <p><img src="assets/logo.png" alt="Iceshrimp" width="400px"></p>
-<p><strong>Iceshrimp</strong> is a decentralized and federated social networking service, implementing the <strong>ActivityPub</strong> standard.<br>
-It was forked from <del>Calckey</del> Firefish (itself a fork of Misskey) in mid-2023, to focus on stability, performance and usability instead of new features.</p>
-
----
-
-> **Note**
-> This project is **not** inactive.
-> 
-> Most of our current development resources are going into the [rewrite](/iceshrimp/Iceshrimp.NET), to further our goal of increasing stability and performance.
-> 
-> This means that major changes to the JS codebase (this project), and especially to the database schema, are on hold for the time being. Bugs will of course still be fixed, and support is still available on the usual channels.
-> 
-> Once the rewrite is finished, there will be an easy upgrade path for existing Iceshrimp instances.
+<p><strong>Lycosand</strong> is a decentralized and federated social networking service, implementing the <strong>Lysand/ActivityPub</strong> standard.<br>
+It is a soft-fork from Iceshrimp, with the main goal to implement the Lysand federation protocol while maintaining support for ActivityPub and achieving feature-parity with commom fediverse stacks.
 
 ---
 - Highlighted changes:
+	- Lysand federation protocol support
 	- First-class Mastodon client API support
 	- Significantly improved database performance
 	- Options to prune cached remote media automatically
